@@ -10,8 +10,8 @@ C++에서 객체를 만들기 위해서는 클래스라는 설계도가 필요�
 #include <iostream>
 
 class Animal {
-  int food;
   int weight;
+  ...
 };  // 세미콜론 잊지 말자!
 
 int main() {
@@ -49,7 +49,7 @@ animal.increase_food(100);  /* 편안 - food가 증가한다는 것을 메소드
 ### 생성자
 ``` C++
 class Animal {
-...
+  ...
   Animal(){}    // 기본 생성자 (생성자가 하나도 없으면 자동 생성)
   
   Animal(int f, int w){   // 생성자
