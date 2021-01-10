@@ -49,11 +49,7 @@ animal.increase_food(100);  /* 편안 - food가 증가한다는 것을 메소드
 ### 생성자
 ``` C++
 class Animal {
-private:
-  int food;
-  int weight;
-
-public:
+...
   Animal(){}    // 기본 생성자 (생성자가 하나도 없으면 자동 생성)
   
   Animal(int f, int w){   // 생성자
