@@ -45,3 +45,27 @@ animal.food += 100;         // 불편 - food가 100증가하지만 이때 연계
 animal.increase_food(100);  /* 편안 - food가 증가한다는 것을 메소드명으로 알 수 있고 
 내부적으로 몸무게가 늘어난다와 같은 변경이 일어날 수도 있지만 외부에서는 신경쓰지 않아도 된다 */
 ```
+
+### 생성자
+``` C++
+class Animal {
+private:
+  int food;
+  int weight;
+
+public:
+  Animal(){}    // 기본 생성자 (생성자가 하나도 없으면 자동 생성)
+  
+  Animal(int f, int w){   // 생성자
+    food = f;
+    weight = w;
+  }
+};
+
+int main(){
+  Animal a1;            // 묵시적 기본 생정자 호출
+  Animal a2 = Animal(); // 명시적 기본 생성자 호출
+  
+  Animal a3(10, 20);    // 생성자 호출
+}
+```
