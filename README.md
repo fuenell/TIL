@@ -1,7 +1,7 @@
 # Today I Learned
 오늘 공부한 것을 정리하는 공간
 
-## Category
+## 카테고리
 - [Language](Language/README.md)
 - [Architecture](Architecture/README.md)
 - Computer
