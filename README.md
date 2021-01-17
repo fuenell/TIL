@@ -3,11 +3,11 @@
 
 ## Category
 - [Language](Language/README.md)
-- [Computer](Computer/README.md)
-- [Mathematics](Mathematics/README.md)
 - [Architecture](Architecture/README.md)
-- [Graphics](Graphics/README.md)
-- [AI](AI/README.md)
+- [Computer]
+- [Mathematics]
+- [Graphics]
+- [AI]
 
 ## 목적
 1. 공부한 것을 체계적으로 정리하여 암기력을 높이기 위해
