@@ -9,3 +9,4 @@ C++ 를 공부하면서 중요한 개념의 문법 및 사용법을 간단히 �
 - [생성자(Constructor)](Constructor.md)
 - [정적(Static)](Static.md)
 - [배열(Array)](Array.md)
+- [암시적 형변환(Implicit Conversion)](Implicit_Conversion.md)
