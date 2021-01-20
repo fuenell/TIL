@@ -51,7 +51,7 @@ int main() {
 class A {
 public:
   explicit A(int a) {
-    cout << "A 생성자 작동";
+    cout << "명시적 생성자";
   }
 };
 ```
