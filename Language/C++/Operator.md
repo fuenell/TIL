@@ -18,26 +18,19 @@ class A {
 
 ## 이항 연산자
 이항 연산자인 `+, -, *, /, ->, =`는 매개변수를 2개 사용해서 연산자를 오버로딩할 수도 있다  
-컴파일러는 매개변수가 1개인 연산자 함수를 우선 순위에 둔다  
-이때는 클래스 밖에서 함수를 오버로드 해야한다  
+이때는 클래스 외부에서 함수를 오버로드 해야한다  
 ``` C++
 A operator+(const A& a, const A& b) {
   return a.num + b.num;
 }
 ```
-또한 이미 `A operator+(const A&)`가 선언 되어 있을 경우 아래와 같이 사용할 수 있다  
-이때 `a+b`를 사용할 수 없는 이유는 `a.operator+(b)` 와 `a+b`는 같은 의미지만  
-컴파일러의 선택지가  `A operator+(const A&)`와 `A operator+(const A& a, const A& b)` 2개이기 때문이다
+a+b는  `*a.operator+(b);`와 `*operator+(a, b);`로 해석된다
+때문에 둘 중 하나를 선언해야 컴파일러가 헛갈리지 않는다  
+그리고 외부 이항 연산자는 연산 순서와 상관없이 작동하기 때문에  
+아래와 같은 상황을 모두 수행하기 위해서는 외부 연산자 함수를 정의해야 한다
 ``` C++
-A operator+(const A& a, const A& b) {
-  return a.operator+(b);
-}
-```
-a+b는  `*a.operator+(b);`와 `*operator+(a, b);`로 해석된다  
-때문에 2번째와 같은 상황에서는 이항 연산자가 있어야 암시적 형변환을 통해 작동한다
-``` C++
-a + 1   // A operator+(const A&) 작동 a.operator+(A(1))로 인식
-1 + a   // A operator+(const A& a, const A& b) 작동 operator+(A(1)+A(a))로 인식
+a + 1   // a.operator+(A(1))와 operator+(A(1)+A(a)) 둘다 작동
+1 + a   // operator+(A(1)+A(a))만 작동
 ```
 ## 출력 연산자
 `std::cout` 에서 사용하는 `<<` 연산자 역시 오버로딩할 수 있다  
