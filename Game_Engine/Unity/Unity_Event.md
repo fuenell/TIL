@@ -1,5 +1,5 @@
 # Unity Event [#API](https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html)
-C#의 델리게이트 또는 옵저버 패턴처럼 특정 이벤트가 발생하면 연결된 함수들을 호출해주는 편리한 기능
+C#의 델리게이트 또는 [옵저버 패턴](https://github.com/normal111/TIL/blob/main/Architecture/Design_Patterns/Observer_Pattern.md)처럼 특정 이벤트가 발생하면 연결된 함수들을 호출해주는 편리한 기능
 
 ## 사용법
 ``` C#
