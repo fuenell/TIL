@@ -16,6 +16,6 @@
 - URP, HDRP
 - Image와 Sprite의 차이
 - Atlas
-- Render 순서 3000번대 2000번대는 알파 사용 안함
+- Render 순서 3000번대 는 ... / 2000번대는 알파 사용 안함
 - position에 따른 렌더 순서 ()
 - 애니메이션 부스터 (2D 뼈 애니메이션)
