@@ -13,7 +13,6 @@
 ## 예제
 더블 휘핑 핫초코 주문 시
 ``` C#
-
 Beverage order1 = new HotChocolate();
 order1 = new Whip(order1);
 order1 = new Whip(order1);
