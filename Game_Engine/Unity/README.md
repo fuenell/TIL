@@ -11,7 +11,7 @@
 - [2020.1](2020_1.md)
 
 ### 빌드
-- 빌드 설정 (LZ4)
+- [Compression Method(압축 방식)](Compression_Method.md)
 - 빌드 파일 디버깅 방법
 
 ### 라이브러리
