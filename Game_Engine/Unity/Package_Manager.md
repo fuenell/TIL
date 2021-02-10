@@ -1,4 +1,4 @@
-# Package Manager
+# Package Manager [#Manual](https://docs.unity3d.com/Manual/upm-ui.html)
 기존에는 에셋 스토어에서 필요한 라이브러리를 찾아서 설치해야했다  
 Unity 2018 부터 추가된 Package Manager를 통해 패키지를 편하게 설치 및 관리할 수 있다  
 `Window > Package Manager` 에서 사용할 수 있다  
