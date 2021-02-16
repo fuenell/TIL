@@ -3,11 +3,50 @@
 코드에서 `new` 키워드를 사용한다면 해당 코드는 구상 객체를 의존하고 있다는 의미다  
 그렇게 된다면 해당 코드는 유연성이 떨어지고 수정해야할 가능성이 증가한다  
 그렇기에 팩토리 패턴을 사용해 객체 생성을 캡슐화 해 (변경되는 부분을 캡슐화)  
-해당 부분에서 변경사항이 발생하더라도 클라이언트에서 코드를 수정할 필요가 없는 코드를 만들 수 있다
+해당 부분에서 변경사항이 발생하더라도 객체 생성을 호출하는 부분을 수정할 필요없는 코드를 만들 수 있다 
 
 ## 간단한 팩토리 (Simple Factory)
 세부적으로 말하자면 간단한 팩토리는 디자인 패턴은 아니지만 (관용구에 가까움)  
 단순하게 객체를 생성하는 부분을 캡슐화할 수 있다  
+``` C#
+MonsterFactory monsterFactory;  // 생성자에서 초기화
+
+public SpwanMonster(string type)
+{
+    Monster monster = monsterFactory.CreateMonster(type);
+    monster?.SetState(0);
+}
+```
+``` C#
+public class MonsterFactory
+{
+    public Monster CreateMonster(string type)
+    {
+        Monster monster;
+        
+        switch (type)
+        {
+            case "zombie":
+                monster = new Zombie();
+                break;
+
+            case "spider":
+                monster = new Spider();
+                break;
+
+            default:
+                monster = null;
+                break;
+        }
+        
+        return monster;
+    }
+}
+```
+
+## 정적 팩토리 (Static Factory)
+정적 팩토리는 간단한 팩토리의 연장선이다
+팩토리 메소드를 정적으로 선언해 팩토리 객체의 인스턴스를 생성하지 않아도 된다는 장점이 있다  
 ``` C#
 public SpwanMonster(string type)
 {
