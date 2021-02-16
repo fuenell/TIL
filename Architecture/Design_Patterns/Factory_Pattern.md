@@ -45,8 +45,9 @@ public class MonsterFactory
 ```
 
 ## 정적 팩토리 (Static Factory)
-정적 팩토리는 간단한 팩토리의 연장선이다
+정적 팩토리는 간단한 팩토리의 연장선이다  
 팩토리 메소드를 정적으로 선언해 팩토리 객체의 인스턴스를 생성하지 않아도 된다는 장점이 있다  
+하지만 서브클래스를 만들어 메소드의 행동을 변경할 수 없다는 단점도 존재한다  
 ``` C#
 public SpwanMonster(string type)
 {
@@ -59,24 +60,7 @@ public class MonsterFactory
 {
     public static Monster CreateMonster(string type)
     {
-        Monster monster;
-        
-        switch (type)
-        {
-            case "zombie":
-                monster = new Zombie();
-                break;
-
-            case "spider":
-                monster = new Spider();
-                break;
-
-            default:
-                monster = null;
-                break;
-        }
-        
-        return monster;
+        /// ...
     }
 }
 ```
