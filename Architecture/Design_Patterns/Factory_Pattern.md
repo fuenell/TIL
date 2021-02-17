@@ -3,7 +3,7 @@
 코드에서 `new` 키워드를 사용한다면 해당 코드는 구상 객체를 의존하고 있다는 의미다  
 그렇게 된다면 해당 코드는 유연성이 떨어지고 수정해야할 가능성이 증가한다  
 그렇기에 팩토리 패턴을 사용해 객체 생성을 캡슐화 해 (변경되는 부분을 캡슐화)  
-해당 부분에서 변경사항이 발생하더라도 객체 생성을 호출하는 부분을 수정할 필요없는 코드를 만들 수 있다 
+객체 생성부분에서 변경사항이 발생할 때, 팩토리 패턴 부분만 수정하면 되는 코드를 만들 수 있다 
 
 ## 간단한 팩토리 (Simple Factory)
 세부적으로 말하자면 간단한 팩토리는 디자인 패턴은 아니지만 (관용구에 가까움)  
@@ -43,6 +43,9 @@ public class MonsterFactory
     }
 }
 ```
+예를 들어 게임의 난이도가 상승해 생성되는 몬스터들은 빨갛고 변하고 더욱 강해져야 한다면
+`MonsterFactory`의 서브 클래스로 `RedMonsterFactory`를 구현해  
+객체를 초기화 하는 부분에서 해당 팩토리를 대신 넣는다면 위 코드는 전혀 수정하지 않고 변경 사항을 적용할 수 있다
 
 ## 정적 팩토리 (Static Factory)
 정적 팩토리는 간단한 팩토리의 연장선이다  
@@ -66,25 +69,51 @@ public class MonsterFactory
 ```
 
 ## 팩토리 메소드 패턴
+팩토리 메소드 패턴을 객체를 생성하는 메소드를 추상 메소드로 두어  
+해당 클래스를 상속받아 각 클래스 별로 
 ``` C#
-using System;
+IMonsterFactory m_MonsterFactory;
 
-public class Class2
+Class2(IMonsterFactory monsterFactory)
 {
-    IMonsterFactory m_MonsterFactory;
+    m_MonsterFactory = monsterFactory;
+}
 
-    Class2(IMonsterFactory monsterFactory)
+public SpwanMonster(string size)
+{
+    Monster monster = m_MonsterFactory.CreateMonster(size); ;
+
+    monster?.SetState(0);
+}
+```
+``` C#
+public SpwanMonster(string size)
+{
+    Monster monster = CreateMonster(size); ;
+
+    monster?.SetState(0);
+}
+
+public class MonsterFactory
+{
+    public abstract Monster CreateMonster(string type)
     {
-        m_MonsterFactory = monsterFactory;
-    }
-
-    public SpwanMonster(string size)
-    {
-        Monster monster = m_MonsterFactory.CreateMonster(size); ;
-
-        monster?.SetState(0);
+        /// ...
     }
 }
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 public interface IMonsterFactory
 {
