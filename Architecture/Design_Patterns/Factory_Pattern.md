@@ -127,7 +127,17 @@ class MonsterFactory
 팩토리 메소드 패턴은 객체를 생성하는 메소드를 추상 메소드로 두어  
 객체의 생성을 각 서브 클래스에 맡긴다
 ``` C#
-class MonsterSpawner
+class Program
+{
+    static void Main(string[] args)
+    {
+        MonsterController monsterController = new CommonMonsterController();
+        monsterController.SpawnMonster("zombie");
+    }
+}
+```
+``` C#
+abstract class MonsterController
 {
     public void SpawnMonster(string size)
     {
@@ -136,24 +146,15 @@ class MonsterSpawner
         monster?.SetState(0);
     }
 
-    public class MonsterFactory
-    {
-        public abstract Monster CreateMonster(string type)
-        {
-            /// ...
-        }
-    }
+    public abstract Monster CreateMonster(string type);
 }
 ```
 ``` C#
-class RedMonsterSpawner : MonsterSpawner
+class CommonMonsterController : MonsterController
 {
-    public class MonsterFactory
+    public override Monster CreateMonster(string type)
     {
-        public abstract Monster CreateMonster(string type)
-        {
-            /// ...
-        }
+        // ...
     }
 }
 ```
