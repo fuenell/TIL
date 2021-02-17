@@ -72,21 +72,6 @@ public class MonsterFactory
 팩토리 메소드 패턴을 객체를 생성하는 메소드를 추상 메소드로 두어  
 해당 클래스를 상속받아 각 클래스 별로 
 ``` C#
-IMonsterFactory m_MonsterFactory;
-
-Class2(IMonsterFactory monsterFactory)
-{
-    m_MonsterFactory = monsterFactory;
-}
-
-public SpwanMonster(string size)
-{
-    Monster monster = m_MonsterFactory.CreateMonster(size); ;
-
-    monster?.SetState(0);
-}
-```
-``` C#
 public SpwanMonster(string size)
 {
     Monster monster = CreateMonster(size); ;
