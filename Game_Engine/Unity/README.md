@@ -7,6 +7,8 @@
 - Scriptable Obejct
 - 커스텀 에디터
 - 커스텀 속성
+- VS git 충돌 해결 (Ctrl+0, Ctrl+O)
+
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
 
