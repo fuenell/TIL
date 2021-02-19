@@ -209,19 +209,6 @@ abstract class WeaponFactory
     public abstract Weapon GetLongWeapon();
 }
 
-class NewWeaponFactory : WeaponFactory
-{
-    public override Weapon GetShortWeapon()
-    {
-        return new Knife();
-    }
-
-    public override Weapon GetLongWeapon()
-    {
-        return new Gun();
-    }
-}
-
 class OldWeaponFactory : WeaponFactory
 {
     public override Weapon GetShortWeapon()
@@ -232,6 +219,19 @@ class OldWeaponFactory : WeaponFactory
     public override Weapon GetLongWeapon()
     {
         return new Bow();
+    }
+}
+
+class NewWeaponFactory : WeaponFactory
+{
+    public override Weapon GetShortWeapon()
+    {
+        return new Knife();
+    }
+
+    public override Weapon GetLongWeapon()
+    {
+        return new Gun();
     }
 }
 ```
