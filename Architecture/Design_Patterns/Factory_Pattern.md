@@ -160,74 +160,78 @@ class CommonMonsterController : MonsterController
 ```
 
 ## 추상 팩토리 패턴
-public interface IMonsterFactory
+인터페이스를 이용하여 서로 연관된 객체를 구상 클래스를 지정하지 않고도 생성할 수 있다
+``` C#
+class Program
 {
-    Monster CreateMonster(string type);
-}
-
-public class ZomieFactory : IMonsterFactory
-{
-    public static Monster CreateMonster(string size)
+    static void Main(string[] args)
     {
-        Zombie zombie;
+        Army army1 = new Army(new OldWeaponFactory());
+        army1.ShortAttack();
+        army1.LongAttack();
 
-        switch (size)
-        {
-            case "small"
-                zombie = new SmallZombie();
-                break;
-
-            case "big"
-                zombie = new BigZombie();
-                break;
-
-            default:
-                zombie = null;
-                break;
-        }
-
-        return zombie;
+        Army army2 = new Army(new NewWeaponFactory());
+        army2.ShortAttack();
+        army2.LongAttack();
     }
 }
-
-public class SpiderFactory : IMonsterFactory
-{
-    public static Monster CreateMonster(string size)
-    {
-        Spider spider;
-
-        switch (size)
-        {
-            case "small"
-                spider = new SmallSpider();
-                break;
-
-            case "big"
-                spider = new BigSpider();
-                break;
-
-            default:
-                spider = null;
-                break;
-        }
-
-        return spider;
-    }
-}
-
-public abstract class Monster
-{
-    public void SetState(int state) { }
-}
-
-public abstract class Zombie : Monster { }
-public class SmallZombie : Zombie { }
-public class BigZombie : Zombie { }
-
-public abstract class Spider : Monster { }
-public class SmallSpider : Spider { }
-public class BigSpider : Spider { }
 ```
+``` C#
+class Army
+{
+    WeaponFactory weaponFactory;
 
-## 추상 팩토리 패턴
+    Weapon shortWeapon;
+    Weapon longWeapon;
 
+    public Army(WeaponFactory newWeaponFactory)
+    {
+        weaponFactory = newWeaponFactory;
+
+        shortWeapon = weaponFactory.GetShortWeapon();
+        longWeapon = weaponFactory.GetLongWeapon();
+    }
+
+    public int ShortAttack()
+    {
+        return shortWeapon.GetDamage();
+    }
+    public int LongAttack()
+    {
+        return longWeapon.GetDamage();
+    }
+}
+```
+``` C#
+abstract class WeaponFactory
+{
+    public abstract Weapon GetShortWeapon();
+    public abstract Weapon GetLongWeapon();
+}
+
+class NewWeaponFactory : WeaponFactory
+{
+    public override Weapon GetShortWeapon()
+    {
+        return new Knife();
+    }
+
+    public override Weapon GetLongWeapon()
+    {
+        return new Gun();
+    }
+}
+
+class OldWeaponFactory : WeaponFactory
+{
+    public override Weapon GetShortWeapon()
+    {
+        return new Sword();
+    }
+
+    public override Weapon GetLongWeapon()
+    {
+        return new Bow();
+    }
+}
+```
