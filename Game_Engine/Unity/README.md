@@ -20,6 +20,7 @@
 - [Package Manager](Package_Manager.md)
 
 ### 그래픽
+- Light (Real Time, Baked(static), 리플렉트(반사), area light(디스플레이 빛))
 - URP, HDRP
 - Image와 Sprite의 차이
 - Atlas
