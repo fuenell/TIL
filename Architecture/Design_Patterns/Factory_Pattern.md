@@ -20,11 +20,11 @@ class Program
 ``` C#
 class MonsterController
 {
-    MonsterFactory m_MonsterFactory;
+    MonsterFactory monsterFactory;
 
     public MonsterController(MonsterFactory monsterFactory)
     {
-        m_MonsterFactory = monsterFactory;
+        this.monsterFactory = monsterFactory;
     }
 
     public void SpwanMonster(string type)
@@ -184,9 +184,9 @@ class Army
     Weapon shortWeapon;
     Weapon longWeapon;
 
-    public Army(WeaponFactory newWeaponFactory)
+    public Army(WeaponFactory weaponFactory)
     {
-        weaponFactory = newWeaponFactory;
+        this.weaponFactory = weaponFactory;
 
         shortWeapon = weaponFactory.GetShortWeapon();
         longWeapon = weaponFactory.GetLongWeapon();
