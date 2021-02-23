@@ -17,7 +17,8 @@
 
 ## 규칙
 1. 모든 내용은 .md 파일로 작성한다. [[마크다운 언어 문법]](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-2. 모든 파일은 README.md에서 링크를 통해 진입할 수 있어야 한다.
+2. 모든 파일은 README.md에서 링크를 통해 진입할 수 있어야 한다
+3. 각 문서는 30분 이내로 작성한다 (주객전도 방지)
 
 ## 로드맵
 ![client_loadmap](https://user-images.githubusercontent.com/37904040/103783496-2614db80-507c-11eb-8763-413bf84ecd05.png)
