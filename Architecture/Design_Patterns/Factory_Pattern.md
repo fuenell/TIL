@@ -29,7 +29,7 @@ class MonsterController
 
     public void SpwanMonster(string type)
     {
-        Monster monster = m_MonsterFactory.CreateMonster(type);
+        Monster monster = monsterFactory.CreateMonster(type);
         monster?.SetState(0);
     }
 }
