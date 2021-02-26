@@ -11,6 +11,7 @@
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
+- [2020.2](2020_2.md)
 
 ### 빌드
 - [Compression Method(압축 방식)](Compression_Method.md)
