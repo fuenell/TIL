@@ -5,10 +5,10 @@
 - [Language](Language/README.md)
 - [Architecture](Architecture/README.md)
 - [Game Engine](Game_Engine/README.md)
-- [Computer](Computer/README.md)
+- [Programming](Programming/README.md)
+- Computer
 - Mathematics
 - Graphics
-- AI
 - Network
 
 ## 목적
