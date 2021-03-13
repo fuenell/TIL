@@ -7,8 +7,8 @@
 - [Architecture](Architecture/README.md)
 - [Game Engine](GameEngine/README.md)
 - [Mathematics](Mathematics/README.md)
+- [Graphics](Graphics/README.md)
 - Computer
-- Graphics
 - Network
 
 ## 목적
