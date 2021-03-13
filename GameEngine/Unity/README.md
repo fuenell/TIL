@@ -3,7 +3,7 @@
 
 ## Index
 ### 기능 / 문법
-- [Unity Event(함수 호출)](Unity_Event.md)
+- [Unity Event(함수 호출)](UnityEvent.md)
 - Scriptable Obejct
 - 커스텀 에디터
 - 커스텀 속성
@@ -14,11 +14,11 @@
 - [2020.2](2020_2.md)
 
 ### 빌드
-- [Compression Method(압축 방식)](Compression_Method.md)
+- [Compression Method(압축 방식)](CompressionMethod.md)
 - 빌드 파일 디버깅 방법
 
 ### 라이브러리
-- [Package Manager](Package_Manager.md)
+- [Package Manager](PackageManager.md)
 
 ### 그래픽
 - Light (Real Time, Baked(static), 리플렉트(반사), area light(디스플레이 빛))
