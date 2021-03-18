@@ -4,3 +4,4 @@
 ## Index
 - [자료 구조 (Data Structure)](DataStructure.md)
 - [성능 (Performance)](Performance.md)
+- [분할정복 (DivideAndConquer)](DivideAndConquer.md)
