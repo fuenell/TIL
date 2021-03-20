@@ -3,3 +3,5 @@
 
 ## Index
 - [논리](Logic.md)
+- [증명](Proof.md)
+
