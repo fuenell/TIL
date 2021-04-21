@@ -7,3 +7,5 @@
 - [집합](Set.md)
 - [행렬](Matirx.md)
 - [관계](Relation.md)
+
+- [함수](Function.md)
