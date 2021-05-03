@@ -1,14 +1,14 @@
-# 컨테이너 (Container)
+# 시퀀스 컨테이너 (Sequence Container)
 
-STL에 포함된 컨테이너에 대하여 알아보겠다
+STL 컨테이너는 기본적인 자료구조들이기 때문에 자주 사용하므로, C++에서는 필수로 배워야 한다
 
-기본적인 자료구조들이기 때문에 자주 사용하므로, C++에서는 필수로 배워야 한다
+크게 시퀀스 컨테이너인 `vector, list, deque`와 연관 컨테이너인 `set, map`으로 나눌 수 있다
 
-크게 선형 자료구조인 `vector, list, deque`와 비선형 자료구조인 `set, map`으로 나눌 수 있다
+먼저 시퀀스 컨테이너에 대하여 알아보겠다
 
-## iterator
+## Iterator
 
-`iterator`는 아래의 컨테이너들이 비슷한 방식으로 원소에 접근하기 위한 반복자이다
+`iterator`는 아래의 컨테이너들을 비슷한 방식으로 원소에 접근하기 위한 반복자이다
 
 `vector`의 경우 `vector.begin()`과 `vector.end()`로 첫 원소의 위치와 마지막 원소 + 1위치를 얻을 수 있다
 
@@ -16,9 +16,14 @@ STL에 포함된 컨테이너에 대하여 알아보겠다
 for (vector<int>::iterator itr = vec.begin(); itr != vec.end(); itr++) {
 	cout << *itr << endl;
 }
+
+// 다음과 같이 간단하게 사용할 수도 있다
+for (const auto& elem : m) {
+    cout << elem << endl;
+}
 ```
 
-## vector
+## Vector
 
 `vector`는 가변길이 배열이다
 
@@ -48,7 +53,7 @@ int main() {
 }
 ```
 
-## list
+## List
 
 `list`는 노드로 연결된 양방향 연결리스트다
 
@@ -75,7 +80,7 @@ int main() {
 }
 ```
 
-## deque
+## Deque
 
 `deque`는 `vector`에다가 `O(1)`비용으로 맨 앞에 원소를 추가하는 함수가 추가된 배열이다
 
@@ -111,8 +116,3 @@ int main() {
     }
 }
 ```
-
-## set
-
-## map
-
