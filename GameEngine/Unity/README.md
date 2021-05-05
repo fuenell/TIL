@@ -1,5 +1,5 @@
 # 유니티 (Unity)
-유니티 엔진 팁 정리
+유니티 엔진 팁 정리 (시간적 여유가 될 때 조금씩 정리할 예정)
 
 ## Index
 ### 기능 / 문법
@@ -26,5 +26,4 @@
 - Image와 Sprite의 차이
 - Atlas
 - Render 순서 3000번대 는 ... / 2000번대는 알파 사용 안함
-- position에 따른 렌더 순서 ()
-- 애니메이션 부스터 (2D 뼈 애니메이션)
+- position에 따른 렌더 순서 설정 (Transparency Sort Mode)
