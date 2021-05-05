@@ -12,6 +12,8 @@
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
 - [2020.2](2020_2.md)
+- https://unity.com/releases/artist-features/2020-lts-tier2-features
+- https://unity.com/releases/artist-features
 
 ### 빌드
 - [Compression Method(압축 방식)](CompressionMethod.md)
