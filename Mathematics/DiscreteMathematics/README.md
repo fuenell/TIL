@@ -9,3 +9,4 @@
 - [관계](Relation.md)
 - [함수](Function.md)
 - [부울대수](Boolean.md)
+- [그래프](Graph.md)
