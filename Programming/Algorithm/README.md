@@ -7,5 +7,7 @@
 - [분할정복 (Divide And Conquer)](DivideAndConquer.md)
 - [동적프로그래밍 (Dynamic Programming)](DynamicProgramming.md)
 - [욕심쟁이 방법 (Greedy Method)](GreedyMethod.md)
-- [정렬 (n²)](Sort_1.md)
+- [정렬](Sort.md)
+- [탐색](Search.md)
+- [근사 알고리즘](Approximation.md)
 
