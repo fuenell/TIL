@@ -4,10 +4,11 @@
 ## Index
 ### 기능 / 문법
 - [Unity Event(함수 호출)](UnityEvent.md)
-- Scriptable Obejct
+- Scriptable Obejct (에디터에서 수정)
 - 커스텀 에디터
 - 커스텀 속성
 - VS git 충돌 해결 (Ctrl+0, Ctrl+O)
+- 라벨링과 라벨 검색
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
