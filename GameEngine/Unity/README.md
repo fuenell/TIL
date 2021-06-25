@@ -4,7 +4,7 @@
 ## Index
 ### 기능 / 문법
 - [Unity Event(함수 호출)](UnityEvent.md)
-- Scriptable Obejct (에디터에서 수정)
+- [ScriptableObejct](ScriptableObejct.md)
 - 커스텀 에디터
 - 커스텀 속성
 - VS git 충돌 해결 (Ctrl+0, Ctrl+O)
