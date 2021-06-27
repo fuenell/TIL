@@ -10,3 +10,5 @@
 - [함수](Function.md)
 - [부울대수](Boolean.md)
 - [그래프](Graph.md)
+- [조합](Combination.md)
+
