@@ -7,4 +7,5 @@
 - [기본 도형 그리기](DrawFiugure.md)
 - [도형 채우기](Fill.md)
 - [기하 변환](GeometricTransformation.md)
-
+- [뷰잉](Viewing.md)
+- [곡선](Curve)
