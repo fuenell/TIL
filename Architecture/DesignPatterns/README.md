@@ -7,6 +7,8 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 - [데코레이터 패턴 (Decorator Pattern)](DecoratorPattern.md)
 - [팩토리 패턴 (Factory Pattern)](FactoryPattern.md)
 - [싱글톤 패턴 (Singleton Pattern)](SingletonPattern.md)
+- [스테이트 패턴 (State Pattern)](StatePattern.md)
 - [커맨드 패턴 (Command Pattern)](CommandPattern.md)
 - [어댑터 패턴 (Adapter Pattern)](AdapterPattern.md)
 - [템플릿 메소드 패턴 (TemplateMethod Pattern)](TemplateMethodPattern.md)
+
