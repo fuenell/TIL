@@ -3,12 +3,12 @@
 
 ## Index
 ### 기능 / 문법
-- [Unity Event(함수 호출)](UnityEvent.md)
+- [Unity Event (함수 호출)](UnityEvent.md)
 - [ScriptableObejct](ScriptableObejct.md)
 - 커스텀 에디터
 - 커스텀 속성
 - VS git 충돌 해결 (Ctrl+0, Ctrl+O)
-- 라벨링과 라벨 검색
+- [에셋 라벨 (에셋 경로 탐색)](AssetLabel.md)
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
@@ -17,7 +17,7 @@
 - https://unity.com/releases/artist-features
 
 ### 설정 / 빌드
-- [Compression Method(압축 방식)](CompressionMethod.md)
+- [Compression Method (압축 방식)](CompressionMethod.md)
 - [2D/3D 모드 설정](2D3DMode.md)
 - 빌드 파일 디버깅 방법
 
