@@ -16,8 +16,9 @@
 - https://unity.com/releases/artist-features/2020-lts-tier2-features
 - https://unity.com/releases/artist-features
 
-### 빌드
+### 설정 / 빌드
 - [Compression Method(압축 방식)](CompressionMethod.md)
+- [2D/3D 모드 설정](2D3DMode.md)
 - 빌드 파일 디버깅 방법
 
 ### 라이브러리
