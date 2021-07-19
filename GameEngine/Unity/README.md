@@ -13,7 +13,7 @@
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
 - [2020.2](2020_2.md)
-- https://unity.com/releases/artist-features/2020-lts-tier2-features
+- [2020.3(LTS)](2020_3.md)
 - https://unity.com/releases/artist-features
 
 ### 설정 / 빌드
