@@ -30,4 +30,4 @@
 - Image와 Sprite의 차이
 - Atlas
 - Render 순서 3000번대 는 ... / 2000번대는 알파 사용 안함
-- position에 따른 렌더 순서 설정 (Transparency Sort Mode)
+- [position에 따른 렌더 순서 설정 (Transparency Sort Mode)](TransparencySortMode.md)
