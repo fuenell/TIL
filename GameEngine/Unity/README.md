@@ -14,7 +14,7 @@
 - [2020.1](2020_1.md)
 - [2020.2](2020_2.md)
 - [2020.3(LTS)](2020_3.md)
-- https://unity.com/releases/artist-features
+- [2021.1](2021_1.md)
 
 ### 설정 / 빌드
 - [Compression Method (압축 방식)](CompressionMethod.md)
