@@ -5,10 +5,9 @@
 - [논리](Logic.md)
 - [증명](Proof.md)
 - [집합](Set.md)
-- [행렬](Matirx.md)
+- [행렬](Matrix.md)
 - [관계](Relation.md)
 - [함수](Function.md)
 - [부울대수](Boolean.md)
 - [그래프](Graph.md)
 - [조합](Combination.md)
-
