@@ -35,6 +35,6 @@ Housekeeping는 연결되지 않은 기록을 정리하는 기능이었다.
 기본적으로는 자동으로 일정 주기마다 작동하는 것 같지만 수동으로 실행시킬 수 있었다.  
 다음날 확인해보니 원격 저장소의 용량이 절반으로 줄어든 것을 확인할 수 있었다.
 
-### 결론
-develop과 master에서는 직접적으로 커밋하지 말고 feature branch에서 커밋 후 
-squash & fast-forward 후 fature branch를 삭제키는 방법으로 커밋을 깔끔하게 남기는 방식을 채택해서 사용하기로 했다.
+## 결론
+develop과 master에서는 직접적으로 커밋하지 말고 feature branch에서 커밋 후  
+squash & fast-forward 후 fature branch를 삭제해 커밋을 깔끔하게 남기는 방식을 채택해서 사용하기로 했다.
