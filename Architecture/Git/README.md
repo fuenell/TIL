@@ -23,4 +23,4 @@ git의 명령어 및 개발 플로우 정리
 
 ### Gitlab Runner
 - [yml](.md)
-- [git log 정리]()
+- [git log 정리](CleanCommit.md)
