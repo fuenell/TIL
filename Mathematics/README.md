@@ -17,6 +17,12 @@
 
 - [선형대수학](LinearAlgebra/README.md)
 
+
+#### 기하학
+
+- [삼각함수](TrigonometricFunctions/README.md)
+
+
 #### 해석학
 
 - [미적분학](Calculus/README.md)
