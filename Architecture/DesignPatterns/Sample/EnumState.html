@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="number" placeholder='enum count' min='0' /*value="0" */ onchange="ChangeEnumCount(this)">
+        <div id="enum-list"></div>
+    </form>
+    <button onclick="GenerateCode()">코드 생성</button><br>
+    <textarea name="" id="code" cols="80" rows="50"></textarea>
+    <script>
+
+        function ChangeEnumCount(number) {
+            let enumCount = number.value;
+            let enumInputList = "";
+            for (let index = 0; index < enumCount; index++) {
+                enumInputList += "<input type='text' placeholder='enum type' class='enum'><br>"
+            }
+            document.getElementById("enum-list").innerHTML = enumInputList;
+        }
+
+        function GenerateCode() {
+            let enumList = document.getElementsByClassName("enum");
+
+            let m_NewLine = "\r\n";
+
+            let code = "private enum GameState { ";
+            for (const item of enumList) {
+                code += item.value + ", ";
+            }
+            code += "};" + m_NewLine;
+            code += "private GameState m_State;" + m_NewLine;
+            code += m_NewLine;
+
+            // function
+            code += "#region State Function" + m_NewLine;
+
+            // StateChange 함수
+            code += "private void ChangeState(GameState newState)" + m_NewLine;
+            code += "{" + m_NewLine;
+            code += "switch (m_State)" + m_NewLine;
+            code += "{" + m_NewLine;
+            for (const item of enumList) {
+                code += "case GameState." + item.value + ":" + m_NewLine;
+                code += "Exit" + item.value + "();" + m_NewLine;
+                code += "break;" + m_NewLine;
+            }
+            code += "}" + m_NewLine;
+            code += "m_State = newState;" + m_NewLine;
+            code += "switch (m_State)" + m_NewLine;
+            code += "{" + m_NewLine;
+
+            for (const item of enumList) {
+                code += "case GameState." + item.value + ":" + m_NewLine;
+                code += "Enter" + item.value + "();" + m_NewLine;
+                code += "break;" + m_NewLine;
+            }
+
+            code += "}" + m_NewLine;
+            code += "}" + m_NewLine;
+            code += m_NewLine;
+
+            // Enter, Exit 함수
+            for (const item of enumList) {
+                code += "private void Enter" + item.value + "()" + m_NewLine;
+                code += "{" + m_NewLine;
+                code += "// Todo: Enter " + item.value + m_NewLine;
+                code += "}" + m_NewLine;
+                code += m_NewLine;
+
+                code += "private void Exit" + item.value + "()" + m_NewLine;
+                code += "{" + m_NewLine;
+                code += "// Todo: Exit " + item.value + m_NewLine;
+                code += "}" + m_NewLine;
+                code += m_NewLine;
+            }
+
+            code += "#endregion State Function" + m_NewLine;
+
+            let codeDiv = document.getElementById("code");
+            codeDiv.innerHTML = code;
+            codeDiv.select();
+            document.execCommand("copy");
+        }
+
+    </script>
+</body>
+
+</html>
