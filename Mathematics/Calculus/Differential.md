@@ -72,3 +72,10 @@ dx               dx         dx
 ## 미분의 기본성질 2
 
 ![image](https://user-images.githubusercontent.com/37904040/138895133-cf7c72f5-2379-4b4d-8f92-378be5f472ab.png)
+
+## 삼각함수의 도함수
+
+![image](https://user-images.githubusercontent.com/37904040/139061215-e7ea70c8-faa6-47ee-84fc-e92a559970dd.png)
+
+
+
