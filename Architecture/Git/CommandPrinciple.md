@@ -35,16 +35,20 @@ mixed: HEAD가 가리키는 브런치가 목표 커밋을 가리킴, index는 �
 hard: HEAD가 가리키는 브런치가 목표 커밋을 가리킴, index는 목표 커밋의 상태가 됨, 파일의 상태도 돌아간 커밋의 상태가 된다.
 
 ## merge 원리
-커밋 A와 커밋 B를 병합한다.  
-이 때 공통 base를 기준으로 3 way merge를 실행한다.  
+커밋 A에서 커밋 B를 병합한다면
+커밋 A의 tree, 커밋 B의 tree, 공통 base 커밋의 tree로 3 way merge를 실행한다.  
 3 way merge에서 충돌이 없으면 병합 커밋이 생성된다.
 
+![image](https://user-images.githubusercontent.com/37904040/146739071-b1898138-caea-4c32-89bc-7bc53c233cf6.png)
+
 ### 충돌
-3 way merge 중 자동 병합에 실패하면 파일 내용을 기호를 기준으로 나누고 충돌을 발생시킨다.
-index에 충돌된 파일이 3개가 출력된다 (번호가 붙는다)	// 3way merge
+3 way merge 중 자동 병합에 실패하면 파일 내용을 기호를 기준으로 나누고 충돌을 발생시킨다.  
+index에 충돌된 파일이 3개가 출력된다 (번호가 붙는다)	// 3way merge  
+```
 1 -> 최근 공통 커밋 내용
 2 -> 내가 수정한 내용
 3 -> 병합할 내용
+```
 
 이후 충돌 해결 후 파일을 add를 하면 index에 파일이 하나만 남고 0번이 붙는다
 
