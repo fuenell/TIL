@@ -25,7 +25,7 @@
 커밋을 압축하는 것에는 성공했지만 이것들을 강제로 Push 하니 기존 커밋들의 기록이 보이지 않는 곳에 남아서 원격 저장소의 용량이 더 늘어났다.
 
 ### 시도 2-1
-`git gc --prune=now`로 사용되지 않는 기록을 삭제하고 `git push origin -f --all`로 전체 강제 Push 했다.  
+`git reflog expire --expire=now --all && git gc --prune=now --aggressive`로 사용되지 않는 기록을 삭제하고 `git push origin -f --all`로 전체 강제 Push 했다.  
 로컬에서는 .git폴더의 용량이 줄어들었지만 줄어든 정보가 원격 저장소에는 덮어쓰기가 되지 않는 것 같았다.
 
 ### 시도 2-2
