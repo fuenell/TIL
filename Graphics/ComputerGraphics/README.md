@@ -8,4 +8,4 @@
 - [도형 채우기](Fill.md)
 - [기하 변환](GeometricTransformation.md)
 - [뷰잉](Viewing.md)
-- [곡선](Curve)
+- [곡선](Curve.md)
