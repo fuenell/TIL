@@ -2,6 +2,10 @@
 유니티 엔진 팁 정리 (시간적 여유가 될 때 조금씩 정리할 예정)
 
 ## Index
+
+### Unity Learn
+- [Unity Essentials (Unity 기초)](UnityEssentials.md)
+
 ### 기능 / 문법
 - [Unity Event (함수 호출)](UnityEvent.md)
 - [ScriptableObejct](ScriptableObejct.md)
