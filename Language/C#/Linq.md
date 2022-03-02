@@ -15,3 +15,18 @@ var positiveNumbers = from n in intArray
 ``` C#
 var positiveNumbers = intArray.Where(n => 0 < n);
 ```
+
+### Range
+자료형을 연속 데이터로 한번에 초기화할 수 있다.  
+0~100으로 자료형으로 초기화하려면 다음과 같이 for문을 작성해야할 것이다.
+``` C#
+List<int> intList = new List<int>();
+for(int i = 0; i < 100; i++)
+{
+  intList.Add(i);
+}
+```
+하지만 Linq의 Range를 사용하면 다음과 같이 작성할 수 있다.
+``` C#
+List<int> intList = Enumerable.Range(0, 100).ToList();
+```
