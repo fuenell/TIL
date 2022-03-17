@@ -21,6 +21,13 @@
 - `휠 클릭 드래그`: Hand Tool
 - `Ctrl + Alt + 좌클릭 드래그`: Hand Tool
  
-===================
-
+##### 창
+- `Ctrl + [1, 2, 3, 4, 5]`: Scene, Game, Inspector, Hierarchy, Project 창 열기
 - `Ctrl + Shift + C`: 콘솔창 열기
+
+
+### 사운드
+
+Audio Source의 Spatial Blend의 옵션을 1로 두면 Audio Listener 기준으로 사운드를 입체적 공간에서 듣는 것처럼 적용이 된다.  
+아리 3D Sound Settings에서 최소 거리와 최대 거리를 조절할 수 있다.
+
