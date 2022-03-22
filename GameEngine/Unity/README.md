@@ -22,6 +22,7 @@
 - [2021.1](2021_1.md)
 
 ### 설정 / 빌드
+- [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
 - [Compression Method (압축 방식)](CompressionMethod.md)
 - [2D/3D 모드 설정](2D3DMode.md)
 - 빌드 파일 디버깅 방법
