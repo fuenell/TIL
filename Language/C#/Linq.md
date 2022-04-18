@@ -30,7 +30,7 @@ for(int i = 0; i < 100; i++)
 ``` C#
 List<int> intList = Enumerable.Range(0, 100).ToList();
 ```
-### All/Any
+### All / Any
 특정 속성 존재 여부를 검사하는 함수이다.  
 `All`은 모든 요소가 조건을 만족하면 `true`를 반환한다.  
 `Any`는 요소 중 하나라도 조건을 만족하면 `true`를 반환한다. 
