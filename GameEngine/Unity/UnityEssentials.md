@@ -9,7 +9,7 @@
 ##### 시점 이동
 - `우클릭 + [W, S, A, D, Q, E] + (Shift)`: 전, 후, 좌, 우, 상, 하 시점 이동 (속도 증가)
 - `우클릭 + 휠 스핀`: 시점 이동 속도 조절
-- `shift + F`: 선택한 오브젝트의 위치로 시점 이동
+- `Shift + F`: 선택한 오브젝트의 위치로 시점 이동
 - `Ctrl + Shift + F`: 선택한 오브젝트를 시점 위치로 이동
 
 ##### 확대
@@ -22,9 +22,11 @@
 - `Ctrl + Alt + 좌클릭 드래그`: Hand Tool
  
 ##### 창
-- `Ctrl + [1, 2, 3, 4, 5]`: Scene, Game, Inspector, Hierarchy, Project 창 열기
+- `Ctrl + [1, 2, 3, 4, 5, 6]`: Scene, Game, Inspector, Hierarchy, Project, Animation 창 열기
 - `Ctrl + Shift + C`: 콘솔창 열기
 
+##### 조작
+- `Alt + Shift + A`: 선택한 오브젝트 On/Off
 
 ### 사운드
 
