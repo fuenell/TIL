@@ -21,7 +21,7 @@
 - [2020.3(LTS)](2020_3.md)
 - [2021.1](2021_1.md)
 - [2021.2](2021_2.md)
-- 
+
 ### 설정 / 빌드
 - [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
 - [Compression Method (압축 방식)](CompressionMethod.md)
@@ -29,6 +29,9 @@
 - 빌드 파일 디버깅 방법
 - [런타임 리컴파일 순서](Recompile.md)
 - 특수 폴더 (Resources, Editor)
+
+### 빌드 자동화
+- [GitHub Action](GitHubActionUnityBuild.md)
 
 ### 라이브러리
 - [Package Manager](PackageManager.md)

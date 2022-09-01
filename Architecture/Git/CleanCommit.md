@@ -36,4 +36,4 @@ Housekeeping는 연결되지 않은 기록을 정리하는 기능이었다.
 
 ## 결론
 develop과 master에서는 직접적으로 커밋하지 말고 feature branch에서 커밋 후  
-squash & fast-forward 후 fature branch를 삭제해 커밋을 깔끔하게 남기는 방식을 채택해서 사용하기로 했다.
+squash & fast-forward 후 feature branch를 삭제해 커밋을 깔끔하게 남기는 방식을 채택해서 사용하기로 했다.
