@@ -8,8 +8,9 @@
 - [Game Engine](GameEngine/README.md)
 - [Mathematics](Mathematics/README.md)
 - [Graphics](Graphics/README.md)
+- [Server](Server/README.md)
 - Computer
-- Network
+
 
 ## 목적
 1. 공부한 것을 체계적으로 정리하여 암기력을 높이기 위해
