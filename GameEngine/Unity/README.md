@@ -14,6 +14,7 @@
 - VS git 충돌 해결 (Ctrl+0, Ctrl+O)
 - [에셋 라벨 (에셋 경로 탐색)](AssetLabel.md)
 - [딥링크 (링크로 특정 기능을 호출)](DeepLink.md)
+- [무한루프 탈출](BreakInfiniteLoop.md)
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
@@ -26,9 +27,9 @@
 - [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
 - [Compression Method (압축 방식)](CompressionMethod.md)
 - [2D/3D 모드 설정](2D3DMode.md)
-- 빌드 파일 디버깅 방법
 - [런타임 리컴파일 순서](Recompile.md)
 - 특수 폴더 (Resources, Editor)
+- 빌드 파일 디버깅 방법
 
 ### 빌드 자동화
 - [GitHub Action](GitHubActionUnityBuild.md)
