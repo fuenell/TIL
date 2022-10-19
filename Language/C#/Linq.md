@@ -30,6 +30,7 @@ for(int i = 0; i < 100; i++)
 ``` C#
 List<int> intList = Enumerable.Range(0, 100).ToList();
 ```
+
 ### All / Any
 특정 속성 존재 여부를 검사하는 함수이다.  
 `All`은 모든 요소가 조건을 만족하면 `true`를 반환한다.  
@@ -46,4 +47,11 @@ if(intArray.Any(n => n < 0))
 {
   print("음수가 존재합니다.");
 }
+```
+
+### Select
+Select는 컬렉션을 가공해 다른 컬렉션으로 반환하는 함수다.  
+예를 들어 Vector2 List를 Vector3 List로 변환할 때 사용할 수 있다.
+``` C#
+List<Vector3> vector3List = vector2List.Select((vector2) => new Vector3(vector2.x, vector2.y, 0)).ToList();
 ```
