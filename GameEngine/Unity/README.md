@@ -41,7 +41,8 @@
 - [애니메이션 오브젝트 On/Off 시 겹침 현상](AnimationOverlap.md)
 
 ### 그래픽
-- Light (Real Time, Baked(static), 리플렉트(반사), area light(디스플레이 빛))
+- [LightMode](LightMode.md)
+- Light Type - 리플렉트(반사), area light(디스플레이 빛)
 - URP, HDRP
 - Image와 Sprite의 차이
 - Atlas
