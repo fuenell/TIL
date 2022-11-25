@@ -61,7 +61,7 @@ q = cos(θ/2) + sin(θ/2)i
 따라서 x(θ) y(φ) z(ψ) 축으로 회전하는 회전 사원수는 다음과 같다.
 ```
 (cos(θ/2) + sin(θ/2)i) * (cos(φ/2) + sin(φ/2)j) * (cos(ψ/2) + sin(ψ/2)k)
-= (cosZ * cosY * cosX) + (sinZ * sinY * sinX)
+= ((cosZ * cosY * cosX) + (sinZ * sinY * sinX))
 * ((cosZ * cosY * sinX) + (sinZ * sinY * cosX))i
 * ((cosZ * sinY * cosX) - (sinZ * cosY * sinX))j
 * ((sinZ * cosY * cosX) - (cosZ * sinY * sinX))k
