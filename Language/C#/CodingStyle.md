@@ -172,7 +172,7 @@ private GameObject GetPlayer()
     GameObject player = Instantiate(prefab);
 
     // 플레이어 초기화
-    player.name = "Player"; // 해당 줄의 부가 설명을 할 때는, 오른쪽에 공백 한 칸을 두고 주석 작성
+    player.name = "Player"; // 해당 줄의 부가 설명을 할 때는 오른쪽에 공백 한 칸을 두고 주석 작성
     player.SetActive(false);
     
     // 초기화된 플레이어를 반환
