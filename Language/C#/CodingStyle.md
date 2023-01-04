@@ -5,7 +5,7 @@
 아래 Unity에서 제공하는 가이드라인을 많이 참고했다.  
 https://resources.unity.com/games/create-code-style-guide-e-book
 
-코딩 규칙은 일관성이 중요하기 때문에 어떠한 규칙을 따르기로 했다면 해당 규칙을 계속 따라야 한다.
+코딩 규칙의 정답은 없지만 일관성은 중요하기 때문에 어떠한 규칙을 따르기로 했다면 해당 규칙을 계속 따라야 한다.
 
 ## 중괄호
 중괄호 스타일은 크게 K&R, BSD로 나뉘는데 VisualStudio(C#)에서 코드 정렬 시  
