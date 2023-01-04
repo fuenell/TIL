@@ -168,11 +168,11 @@ public bool IsSuccess()
 // 이런 식으로 여러줄을 설명할 때는 윗 주석 작성
 private GameObject GetPlayer()
 {
-    // 플레이어 생성.
+    // 플레이어 생성
     GameObject player = Instantiate(prefab);
 
-    // 세팅 초기화.
-    player.name = "Player"; // 해당 줄의 동작을 설명할 때는 이런 식으로 오른쪽에 공백 한 칸을 두고 주석 작성
+    // 플레이어 초기화
+    player.name = "Player"; // 해당 줄의 부가 설명을 할 때는, 오른쪽에 공백 한 칸을 두고 주석 작성
     player.SetActive(false);
     
     // 초기화된 플레이어를 반환
