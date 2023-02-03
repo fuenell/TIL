@@ -41,7 +41,7 @@ Git 내부에서는 수정 전 파일과 수정 후 파일 총 2GB의 파일이 
 하지만 LFS를 사용한다면 수정 후 이미지인 1GB만 받는다.  
 
 #### 사용법
-아래 명령어를 사용해 LFS로 관리할 파일을 `.gitattributes` 추가할 수 있다.
+아래 명령어를 사용해 LFS로 관리할 파일을 `.gitattributes` 추가할 수 있다.  
 ``` cmd
 git lfs track "*.확장자"
 ```
@@ -49,3 +49,5 @@ git lfs track "*.확장자"
 ```
 *.확장자 filter=lfs diff=lfs merge=lfs -text
 ```
+프로젝트를 최초로 만들 때 추가해두어야 잘 작동한다. (이미 만들어진 프로젝트라면 cache 삭제 후 추가)  
+추적이 시작되면 Push, Pull 명령어 실행 시 자동으로 LFS 저장소에 파일을 저장하고 불러온다.  
