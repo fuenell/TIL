@@ -12,7 +12,11 @@
 - [ContextMenuItem](#contextmenuitem)
 - [ContextMenu](#contextmenu)
 - [HelpURL](#helpurl)
-- [Header](#header)
+- [RequireComponent](#requirecomponent)
+- [SelectionBase](#selectionbase)
+- [AddComponentMenu](#addcomponentmenu)
+- [ExecuteInEditMode](#executeineditmode)
+- [CreateAssetMenu](#createassetmenu)
 
 ## Header
 인스펙터에서 변수 위에 헤더를 추가하는 특성이다.
@@ -20,6 +24,8 @@
 [Header("Int variable")]
 public int a;
 ```
+![레이어 10](https://user-images.githubusercontent.com/37904040/216907231-bd540e2f-97c8-4ab7-8a1e-ed9fc7c6c42a.png)
+
 
 ## Space
 변수 위에 빈공간을 둔다.
@@ -29,6 +35,8 @@ public int a;
 [Space(100)]
 public int b;
 ```
+![레이어 9](https://user-images.githubusercontent.com/37904040/216907247-ae5d31f8-cfee-4e55-8e2d-8a809bb36126.png)
+
 
 ## Tooltip
 
@@ -36,6 +44,8 @@ public int b;
 [Tooltip("변수 a에 대한 설명")]
 public int a;
 ```
+![레이어 8](https://user-images.githubusercontent.com/37904040/216907269-337bd6f1-12f1-433e-82dd-83c92ca8d26c.png)
+
 
 ## Range
 
@@ -43,6 +53,8 @@ public int a;
 [Range(0, 10)]
 public int a;
 ```
+![레이어 7](https://user-images.githubusercontent.com/37904040/216907280-92e91aeb-77be-496c-97db-f5cf50bc0b32.png)
+
 
 ## TextArea
 
@@ -50,6 +62,8 @@ public int a;
 [TextArea]
 public string a;
 ```
+![레이어 6](https://user-images.githubusercontent.com/37904040/216907290-35fd5659-8c15-4a24-91ce-55a7b447e9ef.png)
+
 
 ## Multiline
 
@@ -57,6 +71,8 @@ public string a;
 [Multiline]
 public string a;
 ```
+![레이어 5](https://user-images.githubusercontent.com/37904040/216907307-a173c674-7dde-4273-a6f7-f9214324817d.png)
+
 
 ## SerializeField
 변수에 사용하는 특성으로, 인스펙터에서 변수를 숨길 수 있다.
@@ -65,12 +81,14 @@ public string a;
 private int a;
 ```
 
+
 ## HideInInspector
 변수에 사용하는 특성으로, 인스펙터에서 변수를 숨길 수 있다.
 ``` C#
 [HideInInspector]
 public int a;
 ```
+
 
 ## ContextMenuItem
 변수에 사용하는 특성으로, 인스펙터에서 변수를 우클릭 후 지정된 메소드를 실행 시킬 수 있다.
@@ -83,6 +101,8 @@ void PrintA()
     print(a);
 }
 ```
+![레이어 4](https://user-images.githubusercontent.com/37904040/216907325-e8cc4cf0-85d3-4da6-b5fa-fce0162bb7e4.png)
+
 
 ## ContextMenu
 클래스에 사용하는 특성으로, 스크립트 우상단의 `⋮` 버튼을 눌러 함수를 실행할 수 있게 된다.
@@ -93,6 +113,8 @@ void PrintHelloWorld()
     print("Hello, World!");
 }
 ```
+![레이어 3](https://user-images.githubusercontent.com/37904040/216907341-6d3ac403-2a77-4c5f-be22-5f239a9a28a8.png)
+
 
 ## HelpURL
 클래스에 사용하는 특성으로, 컴포넌트 우상단의 `?` 버튼을 눌렀을 때 연결되는 사이트를 설정할 수 있다.
@@ -100,6 +122,7 @@ void PrintHelloWorld()
 [HelpURL("https://www.youtube.com/")]
 public class AttributeTestScript : MonoBehaviour {}
 ```
+
 
 ## RequireComponent
 클래스에 사용하는 특성으로, 해당 스크립트가 있는 오브젝트에 필수 컴포넌트를 지정할 수 있다.
@@ -112,6 +135,7 @@ public class AttributeTestScript : MonoBehaviour
 }
 ```
 
+
 ## SelectionBase
 클래스에 사용하는 특성으로, 씬에서 해당 특성을 가진 오브젝트의 자식 오브젝트를 선택했을 때 부모 오브젝트가 먼저 선택된다.
 ``` C#
@@ -120,6 +144,7 @@ public class AttributeTestScript : MonoBehaviour
 {
 }
 ```
+
 
 ## AddComponentMenu
 클래스에 사용하는 특성으로, 해당 스크립트를 컴포넌트 메뉴에 추가한다.
@@ -130,6 +155,8 @@ public class AttributeTestScript : MonoBehaviour
 
 }
 ```
+![레이어 1](https://user-images.githubusercontent.com/37904040/216907401-f3f80ad8-c636-4ed9-95cd-3845cb460a79.png)
+
 
 ## ExecuteInEditMode
 클래스에 사용하는 특성으로, 해당 스크립트는 씬을 실행하지 않아도 에디터에서 실행된다.
@@ -143,6 +170,7 @@ public class AttributeTestScript : MonoBehaviour
     }
 }
 ```
+
 
 ## CreateAssetMenu
 ScriptableObject에 사용하는 특성으로 에셋 생성 메뉴를 추가한다.
