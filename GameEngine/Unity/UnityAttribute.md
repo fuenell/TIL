@@ -132,3 +132,8 @@ public class AttributeTestScript : MonoBehaviour
 
 ```
 
+## CreateAssetMenu
+
+``` C#
+[CreateAssetMenu(fileName = "SoundList", menuName = "ScriptableObject/SoundList", order = int.MaxValue)]
+```
