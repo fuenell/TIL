@@ -27,6 +27,8 @@
 
 ##### 조작
 - `Alt + Shift + A`: 선택한 오브젝트 On/Off
+- `Ctrl + N` : 씬 만들기
+- `Ctrl + Shift + N` : 빈 오브젝트 만들기
 
 ### 사운드
 
