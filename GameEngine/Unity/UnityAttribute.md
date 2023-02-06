@@ -131,12 +131,13 @@ public class AttributeTestScript : MonoBehaviour
 클래스에 사용하는 특성으로, 해당 스크립트가 있는 오브젝트에 필수 컴포넌트를 지정한다.  
 한줄에 3개의 컴포넌트를 설정할 수 있기 때문에, 4개 이상의 컴포넌트를 원한다면 여러줄에 나눠 작성해야 한다.
 ``` C#
-[RequireComponent(typeof(Rigidbody), typeof(BoxCollider)]
+[RequireComponent(typeof(Rigidbody))]
 public class AttributeTestScript : MonoBehaviour
 {
 
 }
 ```
+![RequireComponent](https://user-images.githubusercontent.com/37904040/216917987-e2635da7-f52e-4042-96ae-17ddfc7f192e.gif)
 
 
 ## SelectionBase
@@ -148,6 +149,7 @@ public class AttributeTestScript : MonoBehaviour
 
 }
 ```
+![SelectionBase](https://user-images.githubusercontent.com/37904040/216919215-39430dec-9401-4799-998a-e40950733493.gif)
 
 
 ## AddComponentMenu
