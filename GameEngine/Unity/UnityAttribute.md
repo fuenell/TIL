@@ -19,7 +19,7 @@
 - [CreateAssetMenu](#createassetmenu)
 
 ## Header
-변수에 사용하는 특성으로, 변수 상단에 제목을 추가할 수 있다.
+변수에 사용하는 특성으로, 변수 상단에 제목을 추다한다.
 ``` C#
 [Header("Int variable")]
 public int a;
@@ -28,7 +28,7 @@ public int a;
 
 
 ## Space
-변수에 사용하는 특성으로, 변수의 상단여백 크기를 설정할 수 있다.
+변수에 사용하는 특성으로, 변수의 상단여백 크기를 설정한다.
 ``` C#
 public int a;
 
@@ -39,7 +39,7 @@ public int b;
 
 
 ## Tooltip
-변수에 사용하는 특성으로, 변수에 마우스를 올렸을 때 도움말이 나타나도록 설정할 수 있다.
+변수에 사용하는 특성으로, 변수에 마우스를 올렸을 때 도움말이 나타나도록 설정한다.
 ``` C#
 [Tooltip("변수 a에 대한 설명")]
 public int a;
@@ -48,7 +48,7 @@ public int a;
 
 
 ## Range
-int, float 변수에 사용하는 특성으로, 값의 범위를 지정할 수 있다. (슬라이더 형식으로 조절도 가능하다)
+int, float 변수에 사용하는 특성으로, 값의 범위를 지정다한다. (슬라이더 형식으로 조절도 가능하다)
 ``` C#
 [Range(0, 10)]
 public int a;
@@ -57,7 +57,7 @@ public int a;
 
 
 ## TextArea
-string 변수에 사용하는 특성으로, 여러 줄을 작성할 수 있다.
+string 변수에 사용하는 특성으로, 입력 필드가 문자를 여러 줄을 작성할 수 있는 필드로 변경된다.
 ``` C#
 [TextArea]
 public string a;
@@ -66,7 +66,7 @@ public string a;
 
 
 ## Multiline
-string 변수에 사용하는 특성으로, 여러 줄을 작성할 수 있다.
+string 변수에 사용하는 특성으로, 입력 필드가 문자를 여러 줄을 작성할 수 있는 필드로 변경된다. (자동 줄바꿈이 없음)
 ``` C#
 [Multiline]
 public string a;
@@ -75,7 +75,7 @@ public string a;
 
 
 ## SerializeField
-변수에 사용하는 특성으로, 인스펙터에서 private 변수를 표시할 수 있다.
+변수에 사용하는 특성으로, 인스펙터에서 private 변수를 표시한다.
 ``` C#
 [SerializeField]
 private int a;
@@ -83,7 +83,7 @@ private int a;
 
 
 ## HideInInspector
-변수에 사용하는 특성으로, 인스펙터에서 public 변수를 숨길 수 있다.
+변수에 사용하는 특성으로, 인스펙터에서 public 변수를 숨긴다.
 ``` C#
 [HideInInspector]
 public int a;
@@ -105,7 +105,7 @@ void PrintA()
 
 
 ## ContextMenu
-클래스에 사용하는 특성으로, 스크립트 우상단의 `⋮` 버튼을 눌러 함수를 실행할 수 있게 된다.
+메소드에 사용하는 특성으로, 컴포넌트 우상단의 `⋮` 버튼을 눌러 해당 메소드를 실행할 수 있다.
 ``` C#
 [ContextMenu("Print Hello, World!")]
 void PrintHelloWorld()
@@ -117,15 +117,18 @@ void PrintHelloWorld()
 
 
 ## HelpURL
-클래스에 사용하는 특성으로, 컴포넌트 우상단의 `?` 버튼을 눌렀을 때 연결되는 사이트를 설정할 수 있다.
+클래스에 사용하는 특성으로, 컴포넌트 우상단의 `?` 버튼을 눌렀을 때 연결되는 사이트를 설정한다.
 ``` C#
 [HelpURL("https://www.youtube.com/")]
-public class AttributeTestScript : MonoBehaviour {}
+public class AttributeTestScript : MonoBehaviour
+{
+
+}
 ```
 
 
 ## RequireComponent
-클래스에 사용하는 특성으로, 해당 스크립트가 있는 오브젝트에 필수 컴포넌트를 지정할 수 있다.
+클래스에 사용하는 특성으로, 해당 스크립트가 있는 오브젝트에 필수 컴포넌트를 지정한다.  
 한줄에 3개의 컴포넌트를 설정할 수 있기 때문에, 4개 이상의 컴포넌트를 원한다면 여러줄에 나눠 작성해야 한다.
 ``` C#
 [RequireComponent(typeof(Rigidbody), typeof(BoxCollider)]
@@ -137,11 +140,12 @@ public class AttributeTestScript : MonoBehaviour
 
 
 ## SelectionBase
-클래스에 사용하는 특성으로, 씬에서 해당 특성을 가진 오브젝트의 자식 오브젝트를 선택했을 때 부모 오브젝트가 먼저 선택된다.
+클래스에 사용하는 특성으로, 씬에서 해당 특성을 가진 오브젝트의 자식 오브젝트를 선택했을 때 특성을 가진 오브젝트가 먼저 선택된다.
 ``` C#
 [SelectionBase]
 public class AttributeTestScript : MonoBehaviour
 {
+
 }
 ```
 
@@ -173,7 +177,7 @@ public class AttributeTestScript : MonoBehaviour
 
 
 ## CreateAssetMenu
-ScriptableObject에 사용하는 특성으로 에셋 생성 메뉴를 추가한다.
+ScriptableObject에 사용하는 특성으로, 에셋 생성 메뉴를 추가한다.
 ``` C#
 [CreateAssetMenu(fileName = "Test", menuName = "ScriptableObject/Test", order = 0)]
 public class AttributeTestScript : ScriptableObject
