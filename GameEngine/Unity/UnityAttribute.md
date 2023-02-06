@@ -19,7 +19,7 @@
 - [CreateAssetMenu](#createassetmenu)
 
 ## Header
-인스펙터에서 변수 위에 헤더를 추가하는 특성이다.
+변수에 사용하는 특성으로, 변수 상단에 제목을 추가할 수 있다.
 ``` C#
 [Header("Int variable")]
 public int a;
@@ -28,7 +28,7 @@ public int a;
 
 
 ## Space
-변수 위에 빈공간을 둔다.
+변수에 사용하는 특성으로, 변수의 상단여백 크기를 설정할 수 있다.
 ``` C#
 public int a;
 
@@ -39,16 +39,16 @@ public int b;
 
 
 ## Tooltip
-
+변수에 사용하는 특성으로, 변수에 마우스를 올렸을 때 도움말이 나타나도록 설정할 수 있다.
 ``` C#
 [Tooltip("변수 a에 대한 설명")]
 public int a;
 ```
-![레이어 8](https://user-images.githubusercontent.com/37904040/216907269-337bd6f1-12f1-433e-82dd-83c92ca8d26c.png)
+![레이어 8](https://user-images.githubusercontent.com/37904040/216907894-9d093b45-5f03-4a98-a7eb-67c7e1f47b21.png)
 
 
 ## Range
-
+int, float 변수에 사용하는 특성으로, 값의 범위를 지정할 수 있다. (슬라이더 형식으로 조절도 가능하다)
 ``` C#
 [Range(0, 10)]
 public int a;
@@ -57,7 +57,7 @@ public int a;
 
 
 ## TextArea
-
+string 변수에 사용하는 특성으로, 여러 줄을 작성할 수 있다.
 ``` C#
 [TextArea]
 public string a;
@@ -66,7 +66,7 @@ public string a;
 
 
 ## Multiline
-
+string 변수에 사용하는 특성으로, 여러 줄을 작성할 수 있다.
 ``` C#
 [Multiline]
 public string a;
@@ -75,7 +75,7 @@ public string a;
 
 
 ## SerializeField
-변수에 사용하는 특성으로, 인스펙터에서 변수를 숨길 수 있다.
+변수에 사용하는 특성으로, 인스펙터에서 private 변수를 표시할 수 있다.
 ``` C#
 [SerializeField]
 private int a;
@@ -83,7 +83,7 @@ private int a;
 
 
 ## HideInInspector
-변수에 사용하는 특성으로, 인스펙터에서 변수를 숨길 수 있다.
+변수에 사용하는 특성으로, 인스펙터에서 public 변수를 숨길 수 있다.
 ``` C#
 [HideInInspector]
 public int a;
@@ -91,7 +91,7 @@ public int a;
 
 
 ## ContextMenuItem
-변수에 사용하는 특성으로, 인스펙터에서 변수를 우클릭 후 지정된 메소드를 실행 시킬 수 있다.
+변수에 사용하는 특성으로, 변수를 우클릭 후 지정된 메소드를 실행 시킬 수 있다.
 ``` C#
 [ContextMenuItem("Print A", "PrintA")]
 public int a;
