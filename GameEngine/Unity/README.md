@@ -10,12 +10,12 @@
 - [Unity Attribute](UnityAttribute.md)
 - [Unity Event (함수 호출)](UnityEvent.md)
 - [ScriptableObejct](ScriptableObejct.md)
-- 커스텀 에디터
-- 커스텀 속성
-- VS git 충돌 해결 (Ctrl+0, Ctrl+O)
 - [에셋 라벨 (에셋 경로 탐색)](AssetLabel.md)
 - [딥링크 (링크로 특정 기능을 호출)](DeepLink.md)
 - [무한루프 탈출](BreakInfiniteLoop.md)
+- [Addressables](Addressables.md)
+- 커스텀 에디터
+- 커스텀 속성
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
