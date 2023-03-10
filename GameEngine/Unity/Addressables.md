@@ -50,23 +50,23 @@ private RawImage _rawImage;
 
 private void Start()
 {
-    Addressables.LoadAssetAsync<Texture2D>(_assetReference).Completed += (img) =>
+    Addressables.LoadAssetAsync<Texture2D>(_assetReference).Completed += (imgHandle) =>
     {
-        _rawImage.texture = img.Result;
+        _rawImage.texture = imgHandle.Result;
     };
     
     // 또는
     
-    _assetReference.LoadAssetAsync<Texture2D>().Completed += (img) =>
+    _assetReference.LoadAssetAsync<Texture2D>().Completed += (imgHandle) =>
     {
-        _rawImage.texture = img.Result;
+        _rawImage.texture = imgHandle.Result;
     };
 }
 ```
 
 메모리 해제는 Release 메서드로 로드와 비슷한 방식으로 진행하면 된다.
 ``` c#
-Addressables.Release(_assetReference);
+Addressables.Release(_imgHandle);   // 핸들을 맴버 변수로 가지고 있어야 한다.
 // 또는
 _assetReference.ReleaseAsset();
 ```
@@ -82,12 +82,28 @@ _assetReference.ReleaseAsset();
 
 이후 로드를 실행하면 자동으로 서버에서 해당 에셋을 다운로드 받아 캐싱 후 로드한다.
 
+로드하지 않고 다운만 받고 싶다면 다음과 같은 코드를 사용할 수 있다.
+``` c#
+// 에셋의 다운로드 용량을 비동기적으로 확인합니다.
+Addressables.GetDownloadSizeAsync(_assetReference).Completed += (handle) =>
+{
+    if (0 < _downloadSize)
+    {
+        Debug.Log($"Download size: {handle.Result / 1048576f} MB");
+    }
+    else
+    {
+        Debug.Log("이미 다운 완료");
+    }
+};
 
+// 에셋 다운로드 및 캐싱
+Addressables.DownloadDependenciesAsync(_assetReference).Completed += (handle) =>
+{
+    PrintLog("다운 완료: " + handle.Status.ToString());
+};
 
-
-
-
-
-
-
-
+// 다운로드 받은 캐시 삭제
+Addressables.ClearDependencyCacheAsync(_assetReference);
+```
+에셋 하나가 아니라 Label 단위로 다운 받기 위해서는 GetDownloadSizeAsync(string label명) 을 넣어주면 된다.
