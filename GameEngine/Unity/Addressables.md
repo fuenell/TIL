@@ -64,4 +64,30 @@ private void Start()
 }
 ```
 
-메모리 해제는 Release로 로드와 같은 방식으로 진행하면 된다.
+메모리 해제는 Release 메서드로 로드와 비슷한 방식으로 진행하면 된다.
+``` c#
+Addressables.Release(_assetReference);
+// 또는
+_assetReference.ReleaseAsset();
+```
+
+## 원격 에셋 업로드, 다운
+서버에서 에셋을 로드하기 위해서는 다음과 같은 설정이 필요하다.
+1. Addressables Profiles 창에서 Remote 주소를 Custom 설정으로 변경 후 LoadPath를 `서버주소/[BuildTarget]` 로 변경한다.
+2. AddressableAssetSettings 에서 Build Remote Catalog 체크 후 Builds & Load Paths를 Remote로 설정한다.
+3. 서버에 업로드할 Group 선택 후 Build & Load Paths를 Remote로 설정한다.
+4. Addressables Groups 창에서 Build > New Build > Default Build Script 메뉴로 빌드한다.
+5. 프로젝트 경로/ServerData 폴더 속에 있는 폴더를 서버에 업로드 한다.
+6. 에디터에서 테스트 하기 위해서 Play Mode Script를 Use Existing Build로 변경한다.
+
+이후 로드를 실행하면 자동으로 서버에서 해당 에셋을 다운로드 받아 캐싱 후 로드한다.
+
+
+
+
+
+
+
+
+
+
