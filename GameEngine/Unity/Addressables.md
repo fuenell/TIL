@@ -48,27 +48,21 @@ private AssetReference _assetReference;
 [SerializeField]
 private RawImage _rawImage;
 
+private AsyncOperationHandle _textureHandle;
+    
 private void Start()
 {
-    Addressables.LoadAssetAsync<Texture2D>(_assetReference).Completed += (imgHandle) =>
+    Addressables.LoadAssetAsync<Texture2D>(_assetReference).Completed += (handle) =>
     {
-        _rawImage.texture = imgHandle.Result;
-    };
-    
-    // 또는
-    
-    _assetReference.LoadAssetAsync<Texture2D>().Completed += (imgHandle) =>
-    {
+        _textureHandle = handle;
         _rawImage.texture = imgHandle.Result;
     };
 }
 ```
 
-메모리 해제는 Release 메서드로 로드와 비슷한 방식으로 진행하면 된다.
+메모리 해제는 Release 메서드로 진행하면 된다.
 ``` c#
-Addressables.Release(_imgHandle);   // 핸들을 맴버 변수로 가지고 있어야 한다.
-// 또는
-_assetReference.ReleaseAsset();
+Addressables.Release(_textureHandle);   // 핸들을 맴버 변수로 가지고 있어야 한다.
 ```
 
 ## 원격 에셋 업로드, 다운
