@@ -34,9 +34,9 @@ Addressables은 에셋을 그룹 단위로 묶어서 관리해주는 라이브�
 
 추가된 에셋은 해당 에셋의 주소를 이용해 로드할 수 있다. (기본 값은 에셋 경로)
 ``` c#
-Addressables.LoadAssetAsync<Texture2D>("Assets/Texture/test.png").Completed += (img) =>
+Addressables.LoadAssetAsync<Texture2D>("Assets/Texture/test.png").Completed += (handle) =>
 {
-    _rawImage.texture = img.Result;
+    _rawImage.texture = handle.Result;
 };
 ```
 
@@ -55,7 +55,7 @@ private void Start()
     Addressables.LoadAssetAsync<Texture2D>(_assetReference).Completed += (handle) =>
     {
         _textureHandle = handle;
-        _rawImage.texture = imgHandle.Result;
+        _rawImage.texture = handle.Result;
     };
 }
 ```
