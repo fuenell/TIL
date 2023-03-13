@@ -101,3 +101,6 @@ Addressables.DownloadDependenciesAsync(_assetReference).Completed += (handle) =>
 Addressables.ClearDependencyCacheAsync(_assetReference);
 ```
 에셋 하나가 아니라 Label 단위로 다운 받기 위해서는 GetDownloadSizeAsync(string label명) 을 넣어주면 된다.
+
+다운로드 받은 에셋은 캐시 폴더에 저장되기 때문에 영구적인 저장이 아니다.  
+만약 영구적으로 저장하기 위해서는 따로 서버에서 에셋을 다운로드 후 저장하는 코드를 작성해야할 것 같다.
