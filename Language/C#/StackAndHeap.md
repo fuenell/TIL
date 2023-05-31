@@ -13,6 +13,9 @@ void FuncA()    // FuncA가 스택에 저장된다
   int b = 20;   // 지역 변수 b가 스택에 저장된다
 }               // FuncA가 종료되면서 b, a, FuncA가 스택에서 삭제된다
 ```
+![그림1](https://github.com/normal111/TIL/assets/37904040/e9481b1c-a00b-4f9c-889b-e0fba769918f)
+
+
 
 # 힙
 힙 영역에는 클래스를 통해 생성한 인스턴스가 저장된다.
