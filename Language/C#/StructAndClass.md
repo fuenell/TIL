@@ -17,5 +17,5 @@ b = 20;     // a를 넣은 b를 수정해도 b만 값이 변경된다
 ``` C#
 List<int> a = new List<int>();  // a라는 List<int>를 선언한다
 List<int> b = a;                // b에 a를 복사한다
-b.Add(0);                       // b에 0을 추가하면 a와 b모두 
+b.Add(0);                       // b에 0을 추가하면 a와 b는 모두 0을 가지게 된다
 ```
