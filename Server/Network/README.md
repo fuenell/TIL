@@ -5,5 +5,5 @@
 ### 기초
 - [IP](IP.md)
 - [DNS](DNS.md)
-- 포트
+- [Port](Port.md)
 - TCP/UDP
