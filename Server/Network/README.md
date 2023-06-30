@@ -4,6 +4,6 @@
 # Index
 ### 기초
 - [IP](IP.md)
-- DNS
+- [DNS](DNS.md)
 - 포트
 - TCP/UDP
