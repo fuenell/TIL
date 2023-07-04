@@ -6,4 +6,4 @@
 - [IP](IP.md)
 - [DNS](DNS.md)
 - [Port](Port.md)
-- [라우터](Router.md)
+- [Router](Router.md)
