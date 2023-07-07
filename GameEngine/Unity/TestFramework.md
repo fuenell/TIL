@@ -13,7 +13,7 @@ Test Framework는 테스트를 자동으로 진행하는 기능이다.
 ![image](https://github.com/normal111/TIL/assets/37904040/046d979a-386b-4fc6-b645-8b80c6e9fd40)
 
 ## Assembly Definition 추가
-Test 스크립트는 따로 Tests 어셈블리로 묶여 기존 스크립트를 참조할 수 없다.  
+테스트 스크립트는 따로 Tests 어셈블리로 묶여 기존 스크립트를 참조할 수 없다.  
 때문에 테스트할 스크립트를 새로운 어셈블리로 묶어 Tests 어셈블리에 추가해주어야 한다.  
 방법은 아래와 같다.
 
@@ -24,3 +24,33 @@ Test 스크립트는 따로 Tests 어셈블리로 묶여 기존 스크립트를 
 ![image](https://github.com/normal111/TIL/assets/37904040/60371a84-5358-4586-873c-eb7464f1c203)
 
 
+## Test Script
+테스트 스크립트는 크게 `[SetUp]`, `[Test]`, `[UnityTest]` 로 나뉜다.  
+`[SetUp]`은 테스트가 진행되기 전 미리 해주어야 하는 작업을 작성하고,  
+`[Test]`는 런타임 시 테스트를 진행할 작업을 작성하고,  
+`[UnityTest]`는 런타임 시 Coroutine에서 테스트할 작업을 작성한다.  
+각 메소트에서 `Assert`로 테스트 성공 여부를 체크한다.
+
+``` C#
+[SetUp]
+public void SetUp()
+{
+    GameObject gameObject = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/LoginManager"));
+    _loginManager = gameObject.GetComponent<LoginManger>();
+}
+
+[Test]
+public void NewTestScriptSimplePasses()
+{
+    result = _loginManager.Login();
+    Assert.AreEqual(result, 1);    // result가 1이면 테스트 성공
+}
+
+[UnityTest]
+public IEnumerator NewTestScriptWithEnumeratorPasses()
+{
+    result = _loginManager.Login();
+    yield return null;
+    Assert.IsTrue(result == 1);    // result가 1이면 테스트 성공
+}
+```
