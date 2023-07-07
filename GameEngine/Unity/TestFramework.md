@@ -13,7 +13,11 @@ Test Framework는 테스트를 자동으로 진행하는 기능이다.
 ![image](https://github.com/normal111/TIL/assets/37904040/046d979a-386b-4fc6-b645-8b80c6e9fd40)
 
 ## Assembly Definition 추가
-테스트 스크립트는 따로 Tests 어셈블리로 묶여 기존 스크립트를 참조할 수 없다.  
+기본적으로 Unity에서 작성한 스크립트는 Assembly-CSharp에 포함된다.  
+하지만 테스트 스크립트는 따로 Tests 어셈블리로 묶여 서로 참조할 수 없다.  
+
+![image](https://github.com/normal111/TIL/assets/37904040/7674d325-001f-4c66-b50c-89871bfc4e86)
+
 때문에 테스트할 스크립트를 새로운 어셈블리로 묶어 Tests 어셈블리에 추가해주어야 한다.  
 방법은 아래와 같다.
 
