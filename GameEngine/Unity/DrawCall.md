@@ -8,19 +8,25 @@
 ![image](https://github.com/normal111/TIL/assets/37904040/cd13672c-974c-493b-8f6d-c9fbcb3dfaba)
 
 이때 드로우 콜이 발생하면 현재 Render State에 있는 정보를 화면에 그려준다.  
-그리고 다음 오브젝트를 그리려면 Render State를 수정하는 요청을 보내고 다음 드로우 콜을 발생시킨다.
+그리고 다음 오브젝트를 그리려면 Render State를 수정하는 요청을 보내고 다음 드로우 콜을 발생시킨다.  
+이런 식으로 오브젝트를 모두 그리면 렌더 루프가 종료된다. (매 프레임 렌더 루프를 돈다)
 ![image](https://github.com/normal111/TIL/assets/37904040/e8b337dd-c5ab-4e7a-822f-8f0231e451c7)
 
 
 ## Set Pass Call
-Render State를 수정하는 요청 중 Material 관련 정보를 수정하는 요청을 Set Pass Call이라고 한다.
+Render State를 수정하는 요청 중 Material 관련 정보를 수정하는 요청을 Set Pass Call이라고 한다.  
+이러한 Set Pass Call은 비용이 큰편이라서 Set Pass Call만 줄여도 성능이 상승할 수 있다. 
 ![image](https://github.com/normal111/TIL/assets/37904040/2d477119-9eaa-4dfa-bf0c-ddc202e9e2d0)
 
 
-따라서 같은 Material을 사용하는 오브젝트를 여러 개 그린다면 드로우 콜은 늘어나지만 Set Pass Call은 늘어나지 않는다.
+같은 Material을 사용하는 오브젝트를 여러 개 그린다면 드로우 콜은 늘어나지만 Set Pass Call은 늘어나지 않는다.
 ![image](https://github.com/normal111/TIL/assets/37904040/e76ea94e-252a-4410-9bf0-092eeca313e6)
 
 
-## 에디터에서 확인
+## 드로우 콜을 에디터에서 확인
 stats
 frame 프로파일러
+
+## 드로우 콜을 줄여야 하는 이유
+
+## 드로우 콜을 줄이는 방법
