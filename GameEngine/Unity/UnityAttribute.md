@@ -8,6 +8,8 @@
 - [TextArea](#textarea)
 - [Multiline](#multiline)
 - [SerializeField](#serializefield)
+- [Serializable](#Serializable)
+- [SerializeReference](#serializeReference)
 - [HideInInspector](#hideininspector)
 - [ContextMenuItem](#contextmenuitem)
 - [ContextMenu](#contextmenu)
@@ -75,11 +77,50 @@ public string a;
 
 
 ## SerializeField
-변수에 사용하는 특성으로, 인스펙터에서 private 변수를 표시한다.
+변수에 사용하는 특성으로, 변수를 직렬화해 인스펙터에서 변수를 표시한다. (public이 아니더라도)
 ``` C#
 [SerializeField]
 private int a;
 ```
+
+
+## Serializable
+클래스에 사용하는 특성으로, 해당 클래스가 인스펙터에 표시될 수 있게 설정한다.
+``` C#
+[Serializable]
+public class Parent
+{
+    public int num = 0;
+}
+```
+
+
+## SerializeReference
+변수에 사용하는 특성으로, 변수의 타입이 아니라 변수가 참조하고 있는 타입을 인스펙터에 표시한다.
+``` C#
+[SerializeReference]
+Parent child = new Child();
+```
+
+``` C#
+[Serializable]
+public class Parent
+{
+    public int num = 0;
+}
+
+[Serializable]
+public class Child : Parent
+{
+    public string str = "child";
+}
+
+public Parent child1 = new Child();
+
+[SerializeReference]
+public Parent child2 = new Child();
+```
+![image](https://github.com/normal111/TIL/assets/37904040/227d6110-3dbc-4267-a730-044df68525d4)
 
 
 ## HideInInspector
