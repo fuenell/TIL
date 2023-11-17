@@ -1,4 +1,4 @@
-# 애니메이션 오브젝트 On/Off 시 애니메이션 겹침 현상 해결
+# 애니메이션 오브젝트 On/Off 시 애니메이션 Key 값 겹침 현상 해결
 ## 발생 버전:
 `~2022.1` (이후 버전에도 따로 개선해주지 않을 것으로 보임)
 ## 문제: 
@@ -9,6 +9,26 @@
 ---
 
 ## 해결책 1:
+애니메이션이 실행 중인 오브젝트를 끄기 직전에 `Animator.Rebind()`를 호출한다.
+`Rebind()`는 애니메이터의 State와 Parameters를 초기화 시키는 함수로 애니메이터을 초기상태로 되돌린다.
+``` C#
+void HideThisObject()
+{
+    this.GetComponent<Animator>().Rebind();
+    this.gameObject.SetActive(false);
+}
+```
+
+#### 장점:
+- 코드 한 줄을 추가해서 대부분의 문제를 해결할 수 있다.
+- Trigger 같은 파라미터는 오브젝트가 꺼질 때 초기화가 필요한 경우가 있는데 Rebind 호출 시 자동으로 초기화해준다.
+#### 단점:
+- 해당 오브젝트를 끄는 코드를 모두 수정해줘야 한다.
+- 파라미터 값을 유지해야할 경우에는 사용하기 힘들다.
+
+---
+
+## 해결책 2:
 같은 Animator에서 사용되는 모든 애니메이션의 키를 동기화한다. 
 
 ex) 애니메이션이 2개일 경우  
@@ -23,7 +43,7 @@ ex) 애니메이션이 2개일 경우
 
 ---
 
-## 해결책 2:
+## 해결책 3:
 Disable 애니메이션을 만들어서 오브젝트를 꺼야 할 때 끄지 않고 Disable 애니메이션을 재생시킨다. 
 
 #### 장점:
@@ -35,7 +55,7 @@ Disable 애니메이션을 만들어서 오브젝트를 꺼야 할 때 끄지 �
 
 ---
 
-## 해결책 3:
+## 해결책 4:
 `KeepAnimatorControllerStateOnDisable` 옵션을 사용해서 오브젝트를 껐다 켰을 때 애니메이션이 이어서 재생되도록 한다.  
 그러면 해당 현상이 발생하지 않는다.
 ``` C#
@@ -56,6 +76,7 @@ void Awake()
 ``` C#
 void OnEnable()
 {
-    this.GetComponent<Animator>().Play("FirstAnimation", 0, 0);
+    // this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).fullPathHash; 으로 첫 애니메이션을 가져올 수도 있다.
+    this.GetComponent<Animator>().Play(/*FirstAnimationName*/, 0, 0);
 }
 ```
