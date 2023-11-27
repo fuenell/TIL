@@ -32,3 +32,12 @@ Android / 프로젝트명 / 패키지명(유니티에서 적용한 Package Name)
 
 ## 8. 사용자 인증 정보 추가
 7단계에서 만든 OAuth 클라이언트를 선택해서 저장
+
+## 9. 유니티에서 Android setUp 실행
+Window - Google Play Games - Setup - Android setup
+Resources Definition 은 Play 게임즈 서비스 설정 페이지의 사용자 인증 정보에서 리소스 보기 클릭 후 Android(XML) 그대로 복사해서 넣음
+Client ID 는 사용자 인증 정보의 ID를 클릭해서 나오는 수정 페이지에서 확인 가능
+
+
+
+
