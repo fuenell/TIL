@@ -25,6 +25,9 @@
 - [2021.1](2021_1.md)
 - [2021.2](2021_2.md)
 
+### 소셜 로그인
+- [Google Play Games](GooglePlayGames.md)
+
 ### 설정 / 빌드
 - [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
 - [Compression Method (압축 방식)](CompressionMethod.md)
