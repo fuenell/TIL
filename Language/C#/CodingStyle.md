@@ -61,14 +61,21 @@ public Name { get; set; }
 ```
 
 ## 접근 제한자
-의미적 구분을 위해서 모든 클래스와 변수에 접근 제한자를 붙여준다.
+의미적 구분을 위해서 모든 클래스, 함수, 변수에 접근 제한자를 붙여준다.
 ##### 🟢 Good
-private은 생략 가능하다.
 ``` C#
 public class GameManager
 {
-    private int _a;
-    public int B;
+    private int _number;
+    public int Score;
+}
+```
+##### 🔵 Soso
+private은 멤버 변수/함수의 기본 접근 제한자이므로 생략 가능하다.
+``` C#
+public class GameManager
+{
+    int _number;
 }
 ```
 
