@@ -11,46 +11,38 @@ https://resources.unity.com/games/create-code-style-guide-e-book
 ![image](https://user-images.githubusercontent.com/37904040/210523731-5d21f86e-890b-44f2-87ea-b5df1c0519ec.png)
 
 ## 중괄호
-중괄호 스타일은 크게 K&R, BSD로 나뉘는데 VisualStudio(C#)에서 코드 정렬 시  
-자동으로 BSD 방식이 적용되기 때문에 BSD 방식을 사용한다.
+중괄호 스타일은 클래스, 함수, if, for 등 모든 경우에서 아래와 같이 작성한다.
+### 🟢 Good
 ``` C#
-public class A
+for (int i = 0; i < length; i++)
 {
-    private void FuncA()
-    {
-        if (a == 0)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                // 모든 경우에 BSD 방식을 사용
-            }
-        }
-
-        // 예외적으로 코드 블럭 사이의 내용이 한 줄일 경우 다음과 같이 작성하는 것도 허용
-        if (a <= 2) { a = 2; }
-        else if (a <= 4) { a = 4; }
-        else if (a <= 8) { a = 8; }
-    }
+    ...
 }
 ```
-#### 금지 규칙
+
+### 🔵 Soso
 ``` C#
-// K&R 방식 사용 금지
-public class A {
-    private void SetA() {
+// 짧을 경우 아래 규칙 허용
+if (a == 0) { ... }
+```
 
-        // for, if문에서 중괄호 생략 금지
-        for (i = 0; i < 10; i++)
-            if(i % 2 == 0)
-                print(i);
-
-    }
+### 🔴 Bad
+``` C#
+if (a == 0) {
+    ...
 }
+```
+``` C#
+// 중괄호 생략 금지
+for (int i = 0; i < length; i++)
+    ...
+
 ```
 
 ## 접근 제한자
 C#의 경우에는 멤버 변수의 기본 접근 제한자는 private이지만, (클래스의 default는 internal)  
 의미적 구분을 위해서 모든 클래스와 변수에 접근 제한자를 붙여준다.
+### 🟢 Good
 ``` C#
 public class GameManager
 {
@@ -59,26 +51,39 @@ public class GameManager
 }
 ```
 
+### 🔵 Soso
+``` C#
+public class GameManager
+{
+    // 멤버 변수의 기본 접근 제한자가 private 이므로 private 생략 가능
+    int a;
+}
+```
+
 ## 클래스명
 클래스명은 Pascal 표기법을 사용한다.
+### 🟢 Good
 ``` C#
 public class GameManager { }
 ```
 
 ## 가상클래스
 `Abs`를 접두사로 사용한 Pascal 표기법을 사용한다.
+### 🟢 Good
 ``` C#
 public abstract class AbsManager { }
 ```
 
 ## 인터페이스
 `I`를 접두사로 사용한 Pascal 표기법을 사용한다.
+### 🟢 Good
 ``` C#
 public interface IMovable { }
 ```
 
 ## 함수명
 함수명은 Pascal 표기법을 사용한다.
+### 🟢 Good
 ``` C#
 public void DoSomething() { }
 ```
@@ -115,12 +120,20 @@ private string _text;
 
 [SerializeField]
 private GameObject _prefab;
+
+// 어트리뷰트가 하나일 경우 왼쪽에 작성하는 것도 허용
+[SerializeField] private GameObject _prefab;
 ```
 
 ## enum
 enum명과 enum의 요소명 둘 다 Pascal 표기법을 사용한다.
 ``` C#
-public enum FlowType { Null, Play, Stop }
+public enum FlowType
+{
+    Null,
+    Play,
+    Stop
+}
 ```
 
 ## 변수 초기화
@@ -143,12 +156,6 @@ private void Start()
 {
     _enemyCollider = Enemy.GetComponent<Collider>();
 }
-```
-
-## 배열, 리스트 명명 규칙
-``` C#
-int[] apples; // 배열 변수 명은 복수형 (사전 참조, 셀 수 없는 단어는 코딩적 허용으로 s를 붙임)
-List<int> appleList; // 리스트는 List를 접미사로 사용
 ```
 
 ## bool 변수명, 함수명
