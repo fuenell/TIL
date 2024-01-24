@@ -160,7 +160,6 @@ void PrintHelloWorld()
 
 ## MenuItem
 static 메소드에 사용하는 특성으로, 상단 메뉴에 생성된 버튼으로 해당 메소드를 실행할 수 있다.
-[MenuItem("빌드/알파 빌드(2종)")]
 ``` C#
 [MenuItem("New/Print Hello")]
 static void PrintHelloWorld()
