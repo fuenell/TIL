@@ -13,6 +13,7 @@
 - [HideInInspector](#hideininspector)
 - [ContextMenuItem](#contextmenuitem)
 - [ContextMenu](#contextmenu)
+- [MenuItem](#menuitem)
 - [HelpURL](#helpurl)
 - [RequireComponent](#requirecomponent)
 - [SelectionBase](#selectionbase)
@@ -155,6 +156,19 @@ void PrintHelloWorld()
 }
 ```
 ![레이어 3](https://user-images.githubusercontent.com/37904040/216907341-6d3ac403-2a77-4c5f-be22-5f239a9a28a8.png)
+
+
+## MenuItem
+static 메소드에 사용하는 특성으로, 상단 메뉴에 생성된 버튼으로 해당 메소드를 실행할 수 있다.
+[MenuItem("빌드/알파 빌드(2종)")]
+``` C#
+[MenuItem("New/Print Hello")]
+static void PrintHelloWorld()
+{
+    print("Hello, World!");
+}
+```
+![image](https://github.com/fuenell/TIL/assets/37904040/748426cc-3b5f-40f1-95c8-d902362514d3)
 
 
 ## HelpURL
