@@ -9,7 +9,7 @@ ex) TV 리모컨의 전원버튼을 눌렀을 때, TV의 상태가 ON이라면 O
 
 ![TV](https://user-images.githubusercontent.com/37904040/123536569-ffe81280-d765-11eb-9b1d-995720f20c0f.png)
 
-## 열거형 스테이트 [#열거형 상태 관리자 코드 생성기](https://htmlpreview.github.io/?https://github.com/normal111/TIL/blob/main/Architecture/DesignPatterns/Sample/EnumState.html)
+## 열거형 스테이트 [#열거형 상태 관리자 코드 생성기](https://htmlpreview.github.io/?https://github.com/fuenell/TIL/blob/main/Architecture/DesignPatterns/Sample/EnumState.html)
 
 스테이트 패턴을 사용하지 않더라도 enum을 활용해서 상태를 저장하고, if문으로 분기해서 간단하게 코드를 작성할 수 있습니다
 
