@@ -6,11 +6,13 @@
 모든 옵저버들에게 정해진 데이터 형식의 데이터를 전송한다  
 - 보낼 데이터 형식이 추가되면 모든 Update 함수를 고쳐야한다
 - 필요없는 데이터를 수신하는 옵저버가 생길 수 있다
-![옵저버_Push](https://user-images.githubusercontent.com/37904040/106919822-d47c7100-674d-11eb-9158-5b1932adc74f.png)
+
+![옵저버_Push](https://github.com/fuenell/TIL/assets/37904040/a3b884dd-5562-41df-af72-7f348b6e3a08)
 
 ## Pull 형태 옵저버 패턴
 각 옵저버들에게 값이 변경되었다는 것을 알려주고  
 각 옵저버들은 주제 객체에서 원하는 정보를 스스로 가져간다  
 - 위의 단점을 커버할 수 있다
 - 옵저버가 옵저블 클래스를 알고있어야 한다 (상호의존성 증가)
-![옵저버_Pull](https://user-images.githubusercontent.com/37904040/106919813-d34b4400-674d-11eb-80af-78ab97b35c5e.png)
+
+![옵저버_Pull](https://github.com/fuenell/TIL/assets/37904040/10adf428-761b-463e-a31a-2d1a8e2fb2c5)
