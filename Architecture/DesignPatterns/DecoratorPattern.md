@@ -8,7 +8,8 @@
 - `기존 코드를 변경하지 않으므로 버그 발생률을 낮출 수 있다`
 - `클래스 개수가 많아진다`
 
-![다이어그램-데코레이터](https://user-images.githubusercontent.com/37904040/107113846-f63c3c00-68a4-11eb-8b53-02801fe22579.png)
+![image](https://github.com/fuenell/TIL/assets/37904040/bfd1c2a3-b60a-4648-b2cd-f2177fc33f17)
+
 
 ## 예제
 더블 휘핑 핫초코 주문 시
