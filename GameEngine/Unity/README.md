@@ -29,6 +29,7 @@
 - [Google Play Games](GooglePlayGames.md)
 
 ### 설정 / 빌드
+- [오브젝트 복사 시 자동 네이밍](ObjectCopyNaming.md)
 - [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
 - [Compression Method (압축 방식)](CompressionMethod.md)
 - [2D/3D 모드 설정](2D3DMode.md)
