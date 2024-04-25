@@ -68,6 +68,7 @@ print(len(arr))  // 크기 출력
 
 ### 슬라이스
 리스트와 유사한 자료형이다.
+
 배열을 선언할 때 크기를 입력하지 않으면 슬라이스가 된다.
 ```go
 var slice []int  // 슬라이스 선언
@@ -87,6 +88,20 @@ copy(slice2, slice)  // slice2의 크기 만큼 3칸까지 복사 (값 복사)
 ```
 
 ### 맵
+```go
+var map1 map[string]int  // map[KeyType]ValueType 으로 맵을 선언할 수 있다
 
+var map2 = map[string]int{  // 이렇게 선언과 동시에 초기화할 수도 있다
+  "one":   1,
+  "two":   2,
+  "three": 3,
+}
 
+map2["four"] = 4  // key값이 없으면 추가된다, 있으면 수정
 
+print(map2["three"])  // key에 해당하는 값 출력 (없으면 기본값)
+
+var v, ok = map2["five"]  // ok에는 key 존재여부, v에는 값 반환 (없으면 기본값)
+
+delete(map2, "one")  // key값에 해당하는 키와 값 삭제
+```
