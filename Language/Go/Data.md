@@ -89,7 +89,7 @@ copy(slice2, slice)  // slice2의 크기 만큼 3칸까지 복사 (값 복사)
 
 ### 맵
 ```go
-var map1 map[string]int  // map[KeyType]ValueType 으로 맵을 선언할 수 있다
+var map1 map[string]int  // map[KeyType]ValueType 으로 맵을 선언할 수 있다 (nil값을 가진다)
 
 var map2 = map[string]int{  // 이렇게 선언과 동시에 초기화할 수도 있다
   "one":   1,
