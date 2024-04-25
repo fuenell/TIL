@@ -69,8 +69,22 @@ print(len(arr))  // 크기 출력
 ### 슬라이스
 리스트와 유사한 자료형이다.
 배열을 선언할 때 크기를 입력하지 않으면 슬라이스가 된다.
+```go
+var slice []int  // 슬라이스 선언
 
+print(slice == nil)  // 초기화 하지 않는 슬라이스는 nil값을 가진다 (null과 유사), 또한 슬라이스 끼리 비교는 불가능하다
 
+slice = make([]int, 10)  // 0이 10개 있는 슬라이스로 초기화 함
+
+slice = append(slice, 1, 2, 3)  // 슬라이스에 1, 2, 3을 추가
+
+print(len(slice), cap(slice))  // cap은 슬라이스가 확보한 메모리 크기를 확인할 수 있다
+
+var slice1 = slice[0:5]  // 0부터 5위치 까지 영역을 복사함 (주소 복사)
+
+var slice2 = make([]int, 3)
+copy(slice2, slice)  // slice2의 크기 만큼 3칸까지 복사 (값 복사)
+```
 
 ### 맵
 
