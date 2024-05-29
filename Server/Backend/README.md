@@ -23,7 +23,8 @@ Backend.BMember.CustomLogin(id, pw, callback =>
 
 ```
 
-### 3. 게임정보 참조
+### 3. 게임정보(DB) 참조
+테이블 명이 `USER_DATA`이면 아래와 같이 참조한다.
 ``` C#
 // 삽입
 Param param = new Param()
@@ -39,10 +40,6 @@ Backend.GameData.Insert("USER_DATA", param, callback =>
 
         Debug.Log($"데이터 삽입 성공: {callback}");
     }
-    else
-    {
-        Debug.Log($"데이터 삽입 실패: {callback}");
-    }
 });
 
 
@@ -57,17 +54,9 @@ Backend.GameData.GetMyData("USER_DATA", new Where(), callback =>
         {
             gameDataRowInDate = gameDataJson[0]["inDate"].ToString();
 
-            level = int.Parse(gameDataJson[0]["level"]);
-            profileMessage = gameDataJson[0]["profileMessage"].ToString();
+            int level = int.Parse(gameDataJson[0]["level"]);
+            string profileMessage = gameDataJson[0]["profileMessage"].ToString();
         }
-        else
-        {
-            Debug.Log("저장된 데이터가 없습니다");
-        }
-    }
-    else
-    {
-        Debug.Log("저장된 데이터가 없습니다 " + callback);
     }
 });
 
@@ -83,12 +72,31 @@ Backend.GameData.UpdateV2("USER_DATA", gameDataRowInDate, Backend.UserInDate, pa
     {
         Debug.Log($"데이터 수정 성공: {callback}");
     }
-    else
-    {
-        Debug.Log($"데이터 수정 실패: {callback}");
-    }
 });
 ```
 
 ### 4. 차트 참조
+원천 데이터 (고정된 데이터)
+
+``` C#
+Backend.Chart.GetChartContents("123456", callback =>    // 차트 ID가 123456 일 때
+{
+    if (callback.IsSuccess())
+    {
+        JsonData jsonData = callback.FlattenRows();
+
+        if (0 < jsonData.Count)
+        {
+            for (int i = 0; i < jsonData.Count; i++)
+            {
+                int level = int.Parse(jsonData[i]["level"].ToString());
+                int maxExperience = int.Parse(jsonData[i]["maxExperience"].ToString());
+                int rewardGold = int.Parse(jsonData[i]["rewardGold"].ToString());
+
+                Debug.Log($"{level} lv / {maxExperience} exp / {rewardGold} gold");
+            }
+        }
+    }
+});
+```
 
