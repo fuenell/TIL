@@ -77,7 +77,6 @@ Backend.GameData.UpdateV2("USER_DATA", gameDataRowInDate, Backend.UserInDate, pa
 
 ### 4. 차트 참조
 원천 데이터 (고정된 데이터)
-
 ``` C#
 Backend.Chart.GetChartContents("123456", callback =>    // 차트 ID가 123456 일 때
 {
@@ -100,3 +99,89 @@ Backend.Chart.GetChartContents("123456", callback =>    // 차트 ID가 123456 �
 });
 ```
 
+### 5. 뒤끝 펑션
+제공되는 함수 이외의 커스텀 함수를 서버에 등록하고 싶을 때 추가할 수 있다.
+1. https://docs.thebackend.io/sdk-docs/function/work-in-windows/install 개발툴 + 템플릿 설치
+2. 프로젝트에서 커스텀 함수 코드 작성R_DATA`이면 아래와 같이 참조한다.
+``` C#
+// 삽입
+Param param = new Param()
+{
+    {"level", 1 },
+    {"profileMessage", "test" },
+};
+Backend.GameData.Insert("USER_DATA", param, callback =>
+{
+    if (callback.IsSuccess())
+    {
+        gameDataRowInDate = callback.GetInDate();
+
+        Debug.Log($"데이터 삽입 성공: {callback}");
+    }
+});
+
+
+// 조회
+Backend.GameData.GetMyData("USER_DATA", new Where(), callback =>
+{
+    if (callback.IsSuccess())
+    {
+        JsonData gameDataJson = callback.FlattenRows();
+
+        if (0 < gameDataJson.Count)
+        {
+            gameDataRowInDate = gameDataJson[0]["inDate"].ToString();
+
+            int level = int.Parse(gameDataJson[0]["level"]);
+            string profileMessage = gameDataJson[0]["profileMessage"].ToString();
+        }
+    }
+});
+
+// 수정
+Param param = new Param()
+{
+    {"level", 2 },
+    {"profileMessage", "msg" },
+};
+Backend.GameData.UpdateV2("USER_DATA", gameDataRowInDate, Backend.UserInDate, param, callback =>
+{
+    if (callback.IsSuccess())
+    {
+        Debug.Log($"데이터 수정 성공: {callback}");
+    }
+});
+```
+
+### 4. 차트 참조
+원천 데이터 (고정된 데이터)
+``` C#
+Backend.Chart.GetChartContents("123456", callback =>    // 차트 ID가 123456 일 때
+{
+    if (callback.IsSuccess())
+    {
+        JsonData jsonData = callback.FlattenRows();
+
+        if (0 < jsonData.Count)
+        {
+            for (int i = 0; i < jsonData.Count; i++)
+            {
+                int level = int.Parse(jsonData[i]["level"].ToString());
+                int maxExperience = int.Parse(jsonData[i]["maxExperience"].ToString());
+                int rewardGold = int.Parse(jsonData[i]["rewardGold"].ToString());
+
+                Debug.Log($"{level} lv / {maxExperience} exp / {rewardGold} gold");
+            }
+        }
+    }
+});
+```
+
+### 5. 뒤끝 펑션
+제공되는 함수 이외의 커스텀 함수를 서버에 등록하고 싶을 때 추가할 수 있다.
+1. https://docs.thebackend.io/sdk-docs/function/work-in-windows/install 개발툴 + 템플릿 설치
+2. 프로젝트에서 커스텀 함수 코드 작성
+3. `debugConfig.json` 에 정보를 입력해 테스트를 진행
+4. cmd에서 `backend config`를 입력해 `authKey` 에 펑션 키 추가
+5. cmd에서 `backend build [csproj 경로]` 으로 프로젝트 `publish.zip` 으로 빌드
+6. cmd에서 `backend deploy [함수명] [publish.zip 경로]` 으로 프로젝트 서버로 배포
