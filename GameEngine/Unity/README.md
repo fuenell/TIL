@@ -7,7 +7,7 @@
 - [Unity Essentials (Unity 기초)](UnityEssentials.md)
 
 ### 기능 / 문법
-- [Unity Attribute](UnityAttribute.md)
+- [Unity Attribute (속성)](UnityAttribute.md)
 - [Unity Event (함수 호출)](UnityEvent.md)
 - [ScriptableObejct](ScriptableObejct.md)
 - [에셋 라벨 (에셋 경로 탐색)](AssetLabel.md)
@@ -15,8 +15,9 @@
 - [무한루프 탈출](BreakInfiniteLoop.md)
 - [Addressables](Addressables.md)
 - [Test Framework](TestFramework.md)
-- 커스텀 에디터
-- 커스텀 속성
+- [Json](Json.md)
+- 커스텀 에디터 (인스펙터)
+- 커스텀 속성(readonly 어트리뷰트)
 
 #### 버전별 추가 기능
 - [2020.1](2020_1.md)
