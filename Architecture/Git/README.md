@@ -30,3 +30,4 @@ git의 명령어 및 개발 플로우 정리
 
 ### Git 설정
 - [gitattributes](Gitattributes.md)
+- [gitignore 재적용 (캐시 삭제)](RemoveCache.md)
