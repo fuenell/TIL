@@ -11,7 +11,7 @@
 ## 외곽선 중심점
 외곽선을 그리는 방식은 크게 3종류가 있다.
 
-![image](https://github.com/fuenell/TIL/assets/37904040/4ad80a21-0ea3-4433-b021-e1b45edbed99)
+![image](https://github.com/fuenell/TIL/assets/37904040/caee9952-aaa1-4479-9dfa-fb749fc3b63c)
 
 그 중 TextMeshPro에서는 기본적으로 center 방식으로 외곽선을 그린다.
 
