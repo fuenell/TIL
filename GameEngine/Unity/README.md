@@ -4,55 +4,56 @@
 ## Index
 
 ### Unity Learn
-- [Unity Essentials (Unity 기초)](UnityEssentials.md)
+- [Unity Essentials (Unity 기초)](docs/UnityEssentials.md)
 
 ### 기능 / 문법
-- [Unity Attribute (속성)](UnityAttribute.md)
-- [Unity Event (함수 호출)](UnityEvent.md)
-- [ScriptableObejct](ScriptableObejct.md)
-- [에셋 라벨 (에셋 경로 탐색)](AssetLabel.md)
-- [딥링크 (링크로 특정 기능을 호출)](DeepLink.md)
-- [무한루프 탈출](BreakInfiniteLoop.md)
-- [Addressables](Addressables.md)
-- [Test Framework](TestFramework.md)
-- [Json](Json.md)
+- [Unity Attribute (속성)](docs/UnityAttribute.md)
+- [Unity Event (함수 호출)](docs/UnityEvent.md)
+- [ScriptableObejct](docs/ScriptableObejct.md)
+- [에셋 라벨 (에셋 경로 탐색)](docs/AssetLabel.md)
+- [딥링크 (링크로 특정 기능을 호출)](docs/DeepLink.md)
+- [무한루프 탈출](docs/BreakInfiniteLoop.md)
+- [Addressables](docs/Addressables.md)
+- [Test Framework](docs/TestFramework.md)
+- [Json](docs/Json.md)
 - 커스텀 에디터 (인스펙터)
 - 커스텀 속성(readonly 어트리뷰트)
 
 #### 버전별 추가 기능
-- [2020.1](2020_1.md)
-- [2020.2](2020_2.md)
-- [2020.3(LTS)](2020_3.md)
-- [2021.1](2021_1.md)
-- [2021.2](2021_2.md)
+- [2020.1](docs/2020_1.md)
+- [2020.2](docs/2020_2.md)
+- [2020.3(LTS)](docs/2020_3.md)
+- [2021.1](docs/2021_1.md)
+- [2021.2](docs/2021_2.md)
 
 ### 소셜 로그인
-- [Google Play Games](GooglePlayGames.md)
+- [Google Play Games](docs/GooglePlayGames.md)
 
 ### 설정 / 빌드
-- [오브젝트 복사 시 자동 네이밍](ObjectCopyNaming.md)
-- [Script UTF-8 인코딩 설정](ScriptEncodingUTF8.md)
-- [Compression Method (압축 방식)](CompressionMethod.md)
-- [2D/3D 모드 설정](2D3DMode.md)
-- [런타임 리컴파일 순서](Recompile.md)
+- [오브젝트 복사 시 자동 네이밍](docs/ObjectCopyNaming.md)
+- [Script UTF-8 인코딩 설정](docs/ScriptEncodingUTF8.md)
+- [Compression Method (압축 방식)](docs/CompressionMethod.md)
+- [2D/3D 모드 설정](docs/2D3DMode.md)
+- [런타임 리컴파일 순서](docs/Recompile.md)
 - 특수 폴더 (Resources, Editor)
 - 빌드 파일 디버깅 방법
 
 ### 빌드 자동화
-- [GitHub Action](GitHubActionUnityBuild.md)
+- [GitHub Action](docs/GitHubActionUnityBuild.md)
 
 ### 라이브러리
-- [Package Manager](PackageManager.md)
+- [Package Manager](docs/PackageManager.md)
 
 ### 애니메이션
-- [애니메이션 오브젝트 On/Off 시 겹침 현상](AnimationOverlap.md)
+- [애니메이션 오브젝트 On/Off 시 겹침 현상](docs/AnimationOverlap.md)
 
 ### 그래픽
-- [Draw Call](DrawCall.md)
-- [LightMode](LightMode.md)
+- [TextMeshPro Outline](docs/TextMeshProOutline.md)
+- [Draw Call](docs/DrawCall.md)
+- [LightMode](docs/LightMode.md)
 - Light Type - 리플렉트(반사), area light(디스플레이 빛)
 - URP, HDRP
 - Image와 Sprite의 차이
 - Atlas
 - Render 순서 3000번대 는 ... / 2000번대는 알파 사용 안함
-- [position에 따른 렌더 순서 설정 (Transparency Sort Mode)](TransparencySortMode.md)
+- [position에 따른 렌더 순서 설정 (Transparency Sort Mode)](docs/TransparencySortMode.md)
