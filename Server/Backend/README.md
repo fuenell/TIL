@@ -105,8 +105,8 @@ Backend.Chart.GetChartContents("123456", callback =>    // 차트 ID가 123456 �
 2. 프로젝트에서 커스텀 함수 코드 작성
 3. `debugConfig.json` 에 정보를 입력해 테스트를 진행
 4. cmd에서 `backend config`를 입력해 `authKey` 에 펑션 키 추가
-5. cmd에서 `backend build [csproj 경로]` 으로 프로젝트 `publish.zip` 으로 빌드
-6. cmd에서 `backend deploy [함수명] [publish.zip 경로]` 으로 프로젝트 서버로 배포
+5. cmd에서 `backend build [프로젝트 경로]` 로 프로젝트를 `publish.zip` 으로 빌드 (`bin/Release/net6.0\linux-x64` 경로에 생성됨)
+6. cmd에서 `backend deploy [함수명] [publish.zip 경로]` 로 프로젝트 서버로 배포
 
 ``` C#
 public Stream Function(Stream stream, ILambdaContext context)
