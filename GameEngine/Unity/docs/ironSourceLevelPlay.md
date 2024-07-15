@@ -4,7 +4,10 @@ ironSource의 LevelPlay는 Unity에서 지원해주는 광고 미디에이션 SD
 광고 미디에이션이란 여러 광고 플랫폼을 통합 및 관리해주는 것이다.  
 예를 들어 Unity Ads와 Google AdMob을 동시에 사용하는 경우, 각 광고 플랫폼을 관리하는 것이 아니라 미디에이션을 통해 다양한 광고 네트워크를 하나의 인터페이스로 통합하여 관리할 수 있다.
 
-## 세팅법 [#Docs](https://developers.is.com/ironsource-mobile/unity/levelplay-starter-kit/#step-1) / [#가이드 영상](https://youtu.be/sU5njx1jn8w?si=Nu3tSzrrOcsS8aOY)
+## 세팅법 [#Docs](https://developers.is.com/ironsource-mobile/unity/levelplay-starter-kit/#step-1) / [#가이드 영상](https://youtu.be/sU5njx1jn8w?si=Nu3tSzrrOcsS8aOY) / [#추가 가이드 영상](https://youtu.be/povu-YG6bX0?si=FgyvssEithyVyzMz)
+
+`*영상 시청 추천`
+
 #### 1. 아어언 소스 사이트 설정
 1. 아이언 소스 계정 생성
 2. 앱 생성 (광고 종류 활성화)
