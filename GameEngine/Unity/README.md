@@ -26,8 +26,10 @@
 - [2021.1](docs/2021_1.md)
 - [2021.2](docs/2021_2.md)
 
-### 소셜 로그인
-- [Google Play Games](docs/GooglePlayGames.md)
+### SDK
+- [Google Play Games (로그인)](docs/GooglePlayGames.md)
+- [ironSource LevelPlay (광고)](docs/ironSourceLevelPlay.md)
+
 
 ### 설정 / 빌드
 - [오브젝트 복사 시 자동 네이밍](docs/ObjectCopyNaming.md)
