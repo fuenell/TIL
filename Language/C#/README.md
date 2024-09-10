@@ -20,4 +20,5 @@ C#을 복습하면서 중요한 개념의 문법 및 사용법을 간단히 정�
 - [new와 override 함수의 차이점](NewOverride.md)
 
 ### 코딩 스타일
-- [코딩 스타일 (Coding Style)](CodingStyle.md)
+- [코딩 스타일](CodingStyle.md)
+- [Visual Studio 매크로](VisualCommander.md)
