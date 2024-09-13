@@ -50,6 +50,7 @@
 - [애니메이션 오브젝트 On/Off 시 겹침 현상](docs/AnimationOverlap.md)
 
 ### 그래픽
+- [색 공간 (Linear, Gamma)](docs/ColorSpace.md)
 - [TextMeshPro Outline](docs/TextMeshProOutline.md)
 - [Draw Call](docs/DrawCall.md)
 - [LightMode](docs/LightMode.md)
