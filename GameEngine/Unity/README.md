@@ -54,6 +54,7 @@
 - [TextMeshPro Outline](docs/TextMeshProOutline.md)
 - [Draw Call](docs/DrawCall.md)
 - [LightMode](docs/LightMode.md)
+- [Sprite Shape, Sprite Library](docs/SpriteEdit.md)
 - Light Type - 리플렉트(반사), area light(디스플레이 빛)
 - URP, HDRP
 - Image와 Sprite의 차이
