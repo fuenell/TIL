@@ -56,6 +56,7 @@
 - [Draw Call](docs/DrawCall.md)
 - [LightMode](docs/LightMode.md)
 - [Sprite Shape, Sprite Library](docs/SpriteEdit.md)
+- [Photoshop, Figma에서 2D 리소스를 받을 때 주의사항](docs/PhotoshopFigmaUI.md)
 - Light Type - 리플렉트(반사), area light(디스플레이 빛)
 - URP, HDRP
 - Image와 Sprite의 차이
