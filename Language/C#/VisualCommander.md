@@ -2,12 +2,12 @@
 Visual Studio에서 매크로를 사용할 수 있게 해주는 확장 프로그램
 
 ## 설치 방법
-1. 확장 > 확장 관리 > `VisualCommander` 검색 및 설치 > Visual Studio를 종료하여 설치 마무리
+1. `확장 > 확장 관리` `VisualCommander` 검색 및 설치 이후 Visual Studio 창을 닫은 후 나오는 VSIX 수정 버튼 클릭
 
 ![image](https://github.com/user-attachments/assets/cecbaff4-2047-4e99-8038-c016eb8a07c1)
 
 
-2. 확장 > VCmd > Commands... > Add
+2. 설치가 끝나면 Visual Studio을 다시 열고 `확장 > VCmd > Commands... > Add`
 
 ![image](https://github.com/user-attachments/assets/d64100c4-7a37-43a2-b638-6c915246b2b1)
 
@@ -17,7 +17,7 @@ Visual Studio에서 매크로를 사용할 수 있게 해주는 확장 프로그
 ![image](https://github.com/user-attachments/assets/9a41a6d1-a22f-462d-b208-911d71ebe91c)
 
 
-4. 커맨드 코드 작성 창에 아래 코드 붙여넣고 Save 버튼 클릭 후 창 닫기
+4. 커맨드 코드 작성 창에 아래 코드 붙여넣고 하단의 Save 버튼 클릭 후 창 닫기
 ``` C#
 using EnvDTE;
 using EnvDTE80;
