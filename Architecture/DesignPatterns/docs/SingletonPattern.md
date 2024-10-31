@@ -57,3 +57,42 @@ class InitSingleton
     }
 }
 ```
+
+## Unity의 싱글톤 패턴
+유니티에 MonoBehavior를 상속받는 클래스와 오브젝트를 싱글톤으로 유지하려면 아래와 같은 방법이 있다.
+``` C#
+class UnitySingleton : MonoBehaviour
+{
+    private static UnitySingleton _instance;
+    public static UnitySingleton Instance
+    {
+        get
+        {
+            if(_instance == null)
+            {
+                _instance = FindObjectOfType<UnitySingleton>();
+
+                if (_instance == null)
+                {
+                    GameObject obj = new GameObject(nameof(UnitySingleton));
+                    this = obj.AddComponent<UnitySingleton>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if(_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(_instance != this)
+        {
+            Destroy(this);  // Destroy(gameObject) 가 더 깔끔하지만 하나의 오브젝트에 2개의 싱글톤 클래스가 있으면 통째로 사라질 수 있음
+        }
+    }
+}
+```
