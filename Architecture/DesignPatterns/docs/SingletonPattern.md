@@ -92,6 +92,7 @@ class UnitySingleton : MonoBehaviour
         else if(_instance != this)
         {
             Destroy(this);  // Destroy(gameObject) 가 더 깔끔하지만 하나의 오브젝트에 2개의 싱글톤 클래스가 있으면 통째로 사라질 수 있음
+            return;
         }
     }
 }
