@@ -39,6 +39,8 @@
 - [Compression Method (압축 방식)](docs/CompressionMethod.md)
 - [2D/3D 모드 설정](docs/2D3DMode.md)
 - [런타임 리컴파일 순서](docs/Recompile.md)
+- [IL2CPP](docs/IL2CPP.md)
+- [Burst Compiler](docs/BurstCompiler.md)
 - 특수 폴더 (Resources, Editor)
 - 빌드 파일 디버깅 방법
 
