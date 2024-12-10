@@ -75,7 +75,7 @@ class UnitySingleton : MonoBehaviour
                 if (_instance == null)
                 {
                     GameObject obj = new GameObject(nameof(UnitySingleton));
-                    this = obj.AddComponent<UnitySingleton>();
+                    _instance = obj.AddComponent<UnitySingleton>();
                 }
             }
             return _instance;
@@ -96,4 +96,11 @@ class UnitySingleton : MonoBehaviour
         }
     }
 }
+```
+
+약간의 문제점은 아래의 코드 호출 시 new GameObject()가 호출되는 시점에서 Awake가 실행된다.  
+Awake에서 _instance가 할당되기 때문에 2번째 줄은 사실상 없어도 문제는 없다. (코드 가독성 때문에 남겨둠)
+``` C#
+GameObject obj = new GameObject(nameof(UnitySingleton));
+_instance = obj.AddComponent<UnitySingleton>();
 ```
