@@ -46,6 +46,7 @@
 
 ### 빌드 자동화
 - [GitHub Action](docs/GitHubActionUnityBuild.md)
+- [iOS 빌드 자동화](docs/iOSAutoBuild.md)
 
 ### 라이브러리
 - [Package Manager](docs/PackageManager.md)
