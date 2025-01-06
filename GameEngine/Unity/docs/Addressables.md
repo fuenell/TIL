@@ -81,7 +81,7 @@ Addressables.Release(_textureHandle);   // 핸들을 맴버 변수로 가지고 
 // 에셋의 다운로드 용량을 비동기적으로 확인합니다.
 Addressables.GetDownloadSizeAsync(_assetReference).Completed += (handle) =>
 {
-    if (0 < _downloadSize)
+    if (0 < handle.Result)
     {
         Debug.Log($"Download size: {handle.Result / 1048576f} MB");
     }
