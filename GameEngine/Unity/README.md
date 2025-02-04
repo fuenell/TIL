@@ -57,7 +57,8 @@
 
 ### 그래픽
 - [색 공간 (Linear, Gamma)](docs/ColorSpace.md)
-- [TextMeshPro Outline](docs/TextMeshProOutline.md)
+- [TextMeshPro(TMP) 외곽선](docs/TextMeshProOutline.md)
+- [텍스트 끝에 이미지 배치](docs/TextEndImage.md)
 - [Draw Call](docs/DrawCall.md)
 - [LightMode](docs/LightMode.md)
 - [Sprite Shape, Sprite Library](docs/SpriteEdit.md)
