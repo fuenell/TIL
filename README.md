@@ -9,7 +9,7 @@
 - [Mathematics](Mathematics/README.md)
 - [Graphics](Graphics/README.md)
 - [Server](Server/README.md)
-- Computer
+- [Computer](Computer/README.md)
 
 
 ## 목적
