@@ -84,5 +84,5 @@ UTF-8 with BOM 또는 UTF-8(BOM) 로 표기된다.
 
 구글 스토어 콘솔에서 유로 아이템 정보를 csv로 한번에 등록하는 경우에는 BOM 헤더가 들어가면 인식을 못한다.
 
-MS 엑셀에서는 UTF-8은 보통 UTF-8 with BOM을 의마하기 때문에 
+MS 엑셀에서는 UTF-8은 보통 UTF-8 with BOM을 의미하기 때문에 
 BOM이 없는 UTF-8 CSV 파일은 CP949로 열어버릴 수도 있다.
