@@ -33,7 +33,7 @@
 
 
 ### 설정 / 빌드
-- [예약된 폴더 이름](docs/ReservedFolderName)
+- [예약된 폴더 이름](docs/ReservedFolderName.md)
 - [성능 프로파일링](docs/Profiling.md)
 - [오브젝트 복사 시 자동 네이밍](docs/ObjectCopyNaming.md)
 - [Script UTF-8 인코딩 설정](docs/ScriptEncodingUTF8.md)
