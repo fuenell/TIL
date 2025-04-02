@@ -16,6 +16,8 @@ vertices>=100
 movespeed=39    // 인스펙터에 표시되는 모든 값 검색 가능
 그외 대부분의 인스펙터에 표시되는 값 검색 가능
 
+texturetype=<$enum:Default,TextureImporterType$>  // <$enum:값,타입$> 형식으로 특정 enum도 검색이 가능하다.
+
 모든 조건 앞에 '-' 를 붙이면 해당 조건을 제외한다는 의미가 된다
 ```
 
