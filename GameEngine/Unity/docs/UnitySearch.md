@@ -7,17 +7,18 @@
 
 
 ## 주요 문법
+|필터|예시|설명|
+|-|-|-|
+|필터 없이 검색|`gamemanager`|해당 내용이 포함되어(이름, 경로 등) 모든 것을 검색|
+|name|`name:unit`|Project에서 파일 이름 검색|
+|dir|`dir:"Assets/Graphics"`|Project에서 경로에 있는 파일들 검색 (유니티6 부터는 dir="..." 도 가능)|
+|t|`t:prefab`|타입, 모든 컴포넌트 검색|
+|vertices|`vertices>=100`|버텍스 수를 검색 (다른 부등호도 사용 가능)|
+|인스펙터 변수|movespeed=5|인스펙터에 보이는 값으로 입력해야 한다 (띄어쓰기X)|
+|#인스펙터 변수명|#m_movespeed=5|실제 변수명과 똑같이 검색해야 한다|
+|enum검색|인스펙터변수=<$enum:Default,TextureImporterType$>|<$enum:값,타입$> 형식으로 특정 enum도 검색이 가능하다.|
+
 ```
-name:unit  // 이름에 unit이 포함되어 있는지 검색
-dir:"Assets/Graphics"   // 경로에 있는 파일들 검색, 유니티6 부터는 dir="..." 도 가능
-t:prefab   // 타입, 모든 컴포넌트 (스크립트 이름으로도 검색 가능)
-
-vertices>=100
-movespeed=39    // 인스펙터에 표시되는 모든 값 검색 가능
-그외 대부분의 인스펙터에 표시되는 값 검색 가능
-
-texturetype=<$enum:Default,TextureImporterType$>  // <$enum:값,타입$> 형식으로 특정 enum도 검색이 가능하다.
-
 띄어쓰기로 and 연산
 
 모든 조건 앞에 '-' 를 붙이면 해당 조건을 제외한다는 의미가 된다
