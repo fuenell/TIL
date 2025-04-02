@@ -7,10 +7,10 @@
 
 
 ## 주요 문법
-띄어쓰기로 and 연산
 ```
-dir:"Assets/Graphics"   // 유니티6 부터는 dir="..." 도 가능
-t:prefab   // 타입, 컴포넌트
+name:unit  // 이름에 unit이 포함되어 있는지 검색
+dir:"Assets/Graphics"   // 경로에 있는 파일들 검색, 유니티6 부터는 dir="..." 도 가능
+t:prefab   // 타입, 모든 컴포넌트 (스크립트 이름으로도 검색 가능)
 
 vertices>=100
 movespeed=39    // 인스펙터에 표시되는 모든 값 검색 가능
@@ -18,13 +18,15 @@ movespeed=39    // 인스펙터에 표시되는 모든 값 검색 가능
 
 texturetype=<$enum:Default,TextureImporterType$>  // <$enum:값,타입$> 형식으로 특정 enum도 검색이 가능하다.
 
+띄어쓰기로 and 연산
+
 모든 조건 앞에 '-' 를 붙이면 해당 조건을 제외한다는 의미가 된다
 ```
 
 ## 예시
-"Assets/Graphics" 경로 속 버텍스가 100 이상이고 이름에 unit 이 들어가지 않은 모든 prefab을 검색
+"Assets/Graphics" 경로 속 버텍스가 100 이상이고 unit 이 포함되지 않은 모든 prefab을 검색
 ```
-dir:"Assets/Graphics" vertices>=100 -unit t:prefab
+dir:"Assets/Graphics" vertices>=100 -name:unit t:prefab
 ```
 
 ## 쿼리 빌더
