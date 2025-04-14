@@ -31,6 +31,7 @@
 ### SDK
 - [Google Play Games (로그인)](docs/GooglePlayGames.md)
 - [ironSource LevelPlay (광고)](docs/ironSourceLevelPlay.md)
+- [External Dependency Manager for Unity(EDM4U)](docs/EDM4U.md)
 
 
 ### 설정 / 빌드
