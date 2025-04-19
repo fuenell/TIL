@@ -60,6 +60,7 @@ class InitSingleton
 
 ## Unity의 싱글톤 패턴
 유니티에 MonoBehavior를 상속받는 클래스와 오브젝트를 싱글톤으로 유지하려면 아래와 같은 방법이 있다.
+
 ``` C#
 class UnitySingleton : MonoBehaviour
 {
@@ -70,8 +71,10 @@ class UnitySingleton : MonoBehaviour
         {
             if(_instance == null)
             {
+                // 씬에 오브젝트가 있는데 다른 스크립트 Awake가 먼저 발동되어서 외부에서 호출된 경우
                 _instance = FindObjectOfType<UnitySingleton>();
 
+                // 씬에 오브젝트가 없는 경우
                 if (_instance == null)
                 {
                     GameObject obj = new GameObject(nameof(UnitySingleton));
@@ -84,11 +87,13 @@ class UnitySingleton : MonoBehaviour
 
     private void Awake()
     {
+        // 씬에 오브젝트가 있는 경우 스스로 초기화
         if(_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        // 씬에 오브젝트가 2개 로드된 경우
         else if(_instance != this)
         {
             Destroy(this);  // Destroy(gameObject) 가 더 깔끔하지만 하나의 오브젝트에 2개의 싱글톤 클래스가 있으면 통째로 사라질 수 있음
@@ -102,5 +107,5 @@ class UnitySingleton : MonoBehaviour
 Awake에서 _instance가 할당되기 때문에 2번째 줄은 사실상 없어도 문제는 없다. (코드 가독성 때문에 남겨둠)
 ``` C#
 GameObject obj = new GameObject(nameof(UnitySingleton));
-_instance = obj.AddComponent<UnitySingleton>();
+_instance = obj.AddComponent<UnitySingleton>(); // 이 코드는 없어도 동작
 ```
