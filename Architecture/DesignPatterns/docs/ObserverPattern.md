@@ -16,3 +16,34 @@
 - 옵저버가 옵저블 클래스를 알고있어야 한다 (상호의존성 증가)
 
 ![옵저버_Pull](https://github.com/fuenell/TIL/assets/37904040/10adf428-761b-463e-a31a-2d1a8e2fb2c5)
+
+## Unity 옵저버 패턴
+``` C#
+public abstract class Observer : MonoBehaviour
+{
+    public abstract void Notify();
+}
+
+public abstract class Subject : MonoBehaviour
+{
+    private readonly List<Observer> _observers = new List<Observer>();
+
+    protected void Attach(Observer observer)
+    {
+        _observers.Add(observer);
+    }
+
+    protected void Detach(Observer observer)
+    {
+        _observers.Remove(observer);
+    }
+
+    protected void NotifyObservers()
+    {
+        foreach (Observer observer in _observers)
+        {
+            observer.Notify();
+        }
+    }
+}
+```
