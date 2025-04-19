@@ -10,11 +10,11 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 - [커맨드 패턴 (Command Pattern)](docs/CommandPattern.md)
 
 #### 이벤트 호출
-- [이벤트 버스 패턴](docs/EventBusPattern.md)
+- [이벤트 버스 패턴 (Event Bus Pattern)](docs/EventBusPattern.md)
 - [옵저버 패턴 (Observer Pattern)](docs/ObserverPattern.md)
 
 #### 오브젝트 생성
-- [오브젝트 풀 패턴](docs/EventBusPattern.md)
+- [오브젝트 풀 패턴 (Object Pool Pattern)](docs/ObjectPoolPattern.md)
 
 
 
@@ -24,5 +24,5 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 - [데코레이터 패턴 (Decorator Pattern)](docs/DecoratorPattern.md)
 - [팩토리 패턴 (Factory Pattern)](docs/FactoryPattern.md)
 - [어댑터 패턴 (Adapter Pattern)](docs/AdapterPattern.md)
-- [템플릿 메소드 패턴 (TemplateMethod Pattern)](docs/TemplateMethodPattern.md)
+- [템플릿 메소드 패턴 (Template Method Pattern)](docs/TemplateMethodPattern.md)
 
