@@ -1,5 +1,5 @@
 # 이벤트 버스 패턴 (Event Bus Pattern)
-싱글톤 + 옵저버 패턴에서 enum으로 여러 종류의 이벤트를 나눔
+싱글톤 + 옵저버 + enum으로 여러 종류의 이벤트를 나눔
 
 ``` C#
 public class RaceEventBus
