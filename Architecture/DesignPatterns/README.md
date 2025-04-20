@@ -22,6 +22,7 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 #### 객체 감싸기
 - [데코레이터 패턴 (Decorator Pattern)](docs/DecoratorPattern.md)
 - [어댑터 패턴 (Adapter Pattern)](docs/AdapterPattern.md)
+- [퍼사드 패턴 (Facade Pattern)](docs/FacadePattern.md)
 
 
 - [템플릿 메소드 패턴 (Template Method Pattern)](docs/TemplateMethodPattern.md)
