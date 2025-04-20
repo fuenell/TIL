@@ -10,6 +10,7 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 - [커맨드 패턴 (Command Pattern)](docs/CommandPattern.md)
 - [방문자 패턴 (Visitor Pattern)](docs/VisitorPattern.md)
 - [스트래티지 패턴 (Strategy Pattern)](docs/StrategyPattern.md)
+- [서비스 로케이터 패턴 (Service Locator Pattern)](docs/ServiceLocatorPattern.md)
 
 #### 이벤트 호출
 - [이벤트 버스 패턴 (Event Bus Pattern)](docs/EventBusPattern.md)
