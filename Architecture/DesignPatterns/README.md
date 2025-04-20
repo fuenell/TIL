@@ -8,6 +8,7 @@ Head First Design Patterns 책을 읽으며 공부한 내용 정리
 #### 상황별 처리
 - [상태 패턴 (State Pattern)](docs/StatePattern.md)
 - [커맨드 패턴 (Command Pattern)](docs/CommandPattern.md)
+- [방문자 패턴 (Visitor Pattern)](docs/VisitorPattern.md)
 
 #### 이벤트 호출
 - [이벤트 버스 패턴 (Event Bus Pattern)](docs/EventBusPattern.md)
