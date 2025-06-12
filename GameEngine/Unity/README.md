@@ -7,6 +7,7 @@
 - [Unity Essentials (Unity 기초)](docs/UnityEssentials.md)
 
 ### 기능 / 문법
+- [Assembly (어셈블리)](docs/Assembly.md)
 - [Unity Attribute (속성)](docs/UnityAttribute.md)
 - [Unity Event (함수 호출)](docs/UnityEvent.md)
 - [ScriptableObejct](docs/ScriptableObejct.md)
