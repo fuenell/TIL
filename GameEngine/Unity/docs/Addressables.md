@@ -85,6 +85,8 @@ private void Start()
 ```
 
 메모리 해제는 Release 메서드로 진행하면 된다.
+
+만약 에셋을 오브젝트에서 사용 중이라면 해당 오브젝트를 파괴 후 해제해야 한다.
 ``` c#
 Addressables.Release(_textureHandle);   // 핸들을 맴버 변수로 가지고 있어야 한다.
 ```
