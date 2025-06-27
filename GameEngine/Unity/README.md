@@ -7,6 +7,7 @@
 - [Unity Essentials (Unity 기초)](docs/UnityEssentials.md)
 
 ### 기능 / 문법
+- [Addressables](docs/Addressables.md)
 - [Assembly (어셈블리)](docs/Assembly.md)
 - [Unity Attribute (속성)](docs/UnityAttribute.md)
 - [Unity Event (함수 호출)](docs/UnityEvent.md)
@@ -14,7 +15,6 @@
 - [에셋 라벨 (에셋 경로 탐색)](docs/AssetLabel.md)
 - [딥링크 (링크로 특정 기능을 호출)](docs/DeepLink.md)
 - [무한루프 탈출](docs/BreakInfiniteLoop.md)
-- [Addressables](docs/Addressables.md)
 - [Test Framework](docs/TestFramework.md)
 - [Json](docs/Json.md)
 - [UnityAction, UnityEvent](docs/UnityActionUnityEvent.md)
