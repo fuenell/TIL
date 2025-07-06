@@ -29,12 +29,6 @@
 - [2020.2](docs/2020_2.md)
 - [2020.1](docs/2020_1.md)
 
-### SDK
-- [Google Play Games (로그인)](docs/GooglePlayGames.md)
-- [ironSource LevelPlay (광고)](docs/ironSourceLevelPlay.md)
-- [External Dependency Manager for Unity(EDM4U)](docs/EDM4U.md)
-
-
 ### 설정 / 빌드
 - [예약된 폴더 이름 (Resources, Editor)](docs/ReservedFolderName.md)
 - [성능 프로파일링](docs/Profiling.md)
@@ -50,6 +44,14 @@
 ### 빌드 자동화
 - [GitHub Action](docs/GitHubActionUnityBuild.md)
 - [iOS 빌드 자동화](docs/iOSAutoBuild.md)
+
+### 프레임워크
+- [VContainer (의존성 주입)](docs/VContainer.md)
+
+### SDK
+- [Google Play Games (로그인)](docs/GooglePlayGames.md)
+- [ironSource LevelPlay (광고)](docs/ironSourceLevelPlay.md)
+- [External Dependency Manager for Unity(EDM4U)](docs/EDM4U.md)
 
 ### 라이브러리
 - [Package Manager](docs/PackageManager.md)
