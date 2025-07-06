@@ -36,7 +36,7 @@
 
 
 ### 설정 / 빌드
-- [예약된 폴더 이름](docs/ReservedFolderName.md)
+- [예약된 폴더 이름 (Resources, Editor)](docs/ReservedFolderName.md)
 - [성능 프로파일링](docs/Profiling.md)
 - [오브젝트 복사 시 자동 네이밍](docs/ObjectCopyNaming.md)
 - [Script UTF-8 인코딩 설정](docs/ScriptEncodingUTF8.md)
@@ -45,7 +45,6 @@
 - [런타임 리컴파일 순서](docs/Recompile.md)
 - [IL2CPP](docs/IL2CPP.md)
 - [Burst Compiler](docs/BurstCompiler.md)
-- 특수 폴더 (Resources, Editor)
 - 빌드 파일 디버깅 방법
 
 ### 빌드 자동화
