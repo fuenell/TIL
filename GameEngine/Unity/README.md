@@ -10,7 +10,6 @@
 - [Addressables](docs/Addressables.md)
 - [Assembly (어셈블리)](docs/Assembly.md)
 - [Unity Attribute (속성)](docs/UnityAttribute.md)
-- [Unity Event (함수 호출)](docs/UnityEvent.md)
 - [UnityAction, UnityEvent](docs/UnityActionUnityEvent.md)
 - [ScriptableObejct](docs/ScriptableObejct.md)
 - [Json](docs/Json.md)
