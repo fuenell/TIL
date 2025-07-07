@@ -79,7 +79,8 @@ Scope는 VContainer의 핵심적인 개념 중 하나이다.
 아래 명령어들로 자식 스코프를 만들고 해지할 수 있다.
 
 ``` C#
-var child  = lifetimeScope.CreateChild(childLifetimeScopePrefab);
+var child  = lifetimeScope.CreateChild(childLifetimeScopePrefab);   // 프리팹 생성 + 스코프 생성 + 자식 스코프로 연결
 
 child.Dispose();    // 스코프와 자식 스코프들도 모두 해지됨
+GameObject.Destroy(child.gameObject);   // 해지 완료한 스코프는 삭제를 추천
 ```
