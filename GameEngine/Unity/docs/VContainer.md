@@ -75,6 +75,11 @@ public class Game : IStartable {
 
 ## Scope
 Scope는 VContainer의 핵심적인 개념 중 하나이다.
+
+아래 명령어들로 자식 스코프를 만들고 해지할 수 있다.
+
 ``` C#
-var battleScope = lifetimeScope.CreateChild(BattleLifetimeScopePrefab);
+var child  = lifetimeScope.CreateChild(childLifetimeScopePrefab);
+
+child.Dispose();    // 스코프와 자식 스코프들도 모두 해지됨
 ```
