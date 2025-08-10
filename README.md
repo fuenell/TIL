@@ -7,6 +7,7 @@
 - [Architecture](Architecture/README.md)
 - [Game Engine](GameEngine/README.md)
 - [Mathematics](Mathematics/README.md)
+- [Physics](Physics/README.md)
 - [Graphics](Graphics/README.md)
 - [Server](Server/README.md)
 - [Computer](Computer/README.md)
