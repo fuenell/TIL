@@ -170,7 +170,7 @@ Addressables.DownloadDependenciesAsync(_assetReference).Completed += (handle) =>
 // 다운로드 받은 캐시 삭제
 Addressables.ClearDependencyCacheAsync(_assetReference);
 ```
-에셋 하나가 아니라 Label 단위로 다운 받기 위해서는 GetDownloadSizeAsync(string label명) 을 넣어주면 된다.
+에셋 하나가 아니라 Label 단위로 다운 받기 위해서는 GetDownloadSizeAsync(string label명) 을 넣어주면 된다. (또는 label List)
 
 이미 다운 받을 에셋은 다운받지 않고 변경된 에셋이 있으면 새로 다운 받는다. (번들 단위)
 
