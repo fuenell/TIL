@@ -178,3 +178,239 @@ Addressables.ClearDependencyCacheAsync(_assetReference);
 물론 앱 데이터 삭제를 하지 않는 이상 삭제될 일을 거의 없다.  
 
 그래서 변경된 에셋을 계속 다운 받으면 기존 에셋이 삭제되지 않고 지속적으로 누적될 수 있다.
+
+## 실제 어드레서블 다운 예시
+
+```c#
+private List<string> m_downloadLabelList = new List<string>()
+{
+    "default",
+    "GameData",
+    "Battle",
+    "UI",
+    "Equip",
+    "Unit",
+    "Skill",
+};
+
+private bool m_isInitialized = false;
+public bool IsInitialized { get => m_isInitialized; }
+
+public async UniTask InitializeAsync()
+{
+    await InitializeAddressablesAsync();
+    await UpdateCatalogsAsync();
+
+    List<string> validLabelList = await GetValidLabelsAsync(m_downloadLabelList);
+    long downloadSize = await GetDownloadSizeAsync(validLabelList);
+
+    // 패치 다운로드 필요
+    if (0 < downloadSize)
+    {
+        await PromptDownloadAsync(downloadSize);
+        await DownloadLabelAssetsAsync(validLabelList);
+    }
+
+    // 초기화 완료
+    m_isInitialized = true;
+}
+
+// 어드레서블 초기화
+private async UniTask InitializeAddressablesAsync()
+{
+    await UniTask.SwitchToMainThread();
+
+    var initHandle = Addressables.InitializeAsync();
+    await initHandle;
+
+    try
+    {
+        if (!initHandle.IsValid() || initHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            await ErrorException("Addressables 초기화 실패");
+        }
+
+        GameUtil.DebugLog("Addressables 초기화 성공");
+    }
+    finally
+    {
+        Addressables.Release(initHandle); // 해제!
+    }
+}
+
+// 카탈로그(어드레서블 목록) 최신화
+private async UniTask UpdateCatalogsAsync()
+{
+    await UniTask.SwitchToMainThread();
+
+    var checkHandle = Addressables.CheckForCatalogUpdates();
+    await checkHandle;
+
+    if (!checkHandle.IsValid() || checkHandle.Status != AsyncOperationStatus.Succeeded)
+    {
+        await ErrorException("카탈로그 업데이트 체크 실패");
+        return;
+    }
+
+    var catalogsToUpdate = checkHandle.Result;
+    if (catalogsToUpdate == null || catalogsToUpdate.Count == 0)
+    {
+        GameUtil.DebugLog("카탈로그는 이미 최신 상태입니다.");
+        // checkHandle Release 생략 (어드레서블 1.21.19 버그)
+        return;
+    }
+
+    var updateHandle = Addressables.UpdateCatalogs(catalogsToUpdate);
+    await updateHandle;
+
+    try
+    {
+        if (!updateHandle.IsValid() || updateHandle.Status != AsyncOperationStatus.Succeeded)
+        {
+            await ErrorException("카탈로그 업데이트 실패");
+        }
+
+        GameUtil.DebugLog("카탈로그 업데이트 완료!");
+    }
+    finally
+    {
+        Addressables.Release(updateHandle);
+    }
+}
+
+// 입력된 레이블 목록 중 실제 존재하는 Addressables 레이블만 반환
+public async UniTask<List<string>> GetValidLabelsAsync(List<string> inputLabels)
+{
+    var validLabels = new List<string>();
+
+    var tasks = inputLabels.Select(async label =>
+    {
+        await UniTask.SwitchToMainThread();
+
+        var handle = Addressables.LoadResourceLocationsAsync(label);
+        await handle.ToUniTask();
+
+        bool isValid = handle.Status == AsyncOperationStatus.Succeeded && handle.Result.Count > 0;
+        Addressables.Release(handle);
+
+        return (label, isValid);
+    });
+
+    var results = await UniTask.WhenAll(tasks);
+
+    foreach (var result in results)
+    {
+        if (result.isValid)
+            validLabels.Add(result.label);
+    }
+
+    return validLabels;
+}
+
+// 다운로드가 필요한 용량 확인
+private async UniTask<long> GetDownloadSizeAsync(List<string> validLabelList)
+{
+    // 유효한 레이블이 없으면 바로 0 반환
+    if (validLabelList == null || validLabelList.Count == 0)
+    {
+        GameUtil.DebugLog("유효한 다운로드 레이블이 없습니다.");
+        return 0;
+    }
+
+    await UniTask.SwitchToMainThread();
+
+    var sizeHandle = Addressables.GetDownloadSizeAsync(validLabelList);
+    await sizeHandle;
+
+    long downloadSize = 0;
+
+    if (sizeHandle.Status == AsyncOperationStatus.Succeeded)
+    {
+        downloadSize = sizeHandle.Result;
+
+        if (downloadSize > 0)
+            GameUtil.DebugLog($"Download size: {GetReadableSize(downloadSize)}");
+        else
+            GameUtil.DebugLog("이미 다운로드된 상태");
+    }
+    else
+    {
+        GameUtil.ErrorLog($"용량 확인 실패: {sizeHandle.OperationException}");
+    }
+
+    Addressables.Release(sizeHandle);
+    return downloadSize;
+}
+
+// 패치 다운로드 승인 팝업 표시 및 확인 대기
+private async UniTask PromptDownloadAsync(long downloadSize)
+{
+    PatchPopupUI patchPopupUI = PatchPopupUI.CreateAndAddView(m_patchPopupUI);
+    patchPopupUI.SetPatchSize(GetReadableSize(downloadSize));
+    await patchPopupUI.WaitForClose();
+}
+
+// Label에 포함된 어드레서블 다운로드
+private async UniTask DownloadLabelAssetsAsync(List<string> validLabelList)
+{
+    // 유효한 레이블이 없으면 바로 0 반환
+    if (validLabelList == null || validLabelList.Count == 0)
+    {
+        GameUtil.DebugLog("유효한 다운로드 레이블이 없습니다.");
+        return;
+    }
+
+    m_downloadBar.Show();
+
+    await UniTask.SwitchToMainThread();
+
+    var downloadHandle = Addressables.DownloadDependenciesAsync(validLabelList, Addressables.MergeMode.Union);
+
+    while (!downloadHandle.IsDone)
+    {
+        var status = downloadHandle.GetDownloadStatus();
+        m_downloadBar.SetDownloadStatus(status);
+
+        await UniTask.NextFrame();
+    }
+
+    m_downloadBar.Hide();
+
+    if (downloadHandle.Status == AsyncOperationStatus.Succeeded)
+    {
+        GameUtil.DebugLog("에셋 팩 다운로드 완료!");
+    }
+    else
+    {
+        await ErrorException("에셋 팩 다운로드 실패!");
+    }
+
+    Addressables.Release(downloadHandle);
+}
+
+// 에러 발생 시 무한 대기
+private async UniTask ErrorException(string errorLog)
+{
+    GameUtil.ErrorLog(errorLog);
+
+    ErrorPopupManager.Instance.ShowErrorPopup(TextTableKey.ErrorPopup_ServerCommunication);
+
+    await UniTask.WaitUntilCanceled(CancellationToken.None); // 무한 대기
+}
+
+// 바이트를 사람이 읽을 수 있는 크기로 변환
+private string GetReadableSize(long bytes)
+{
+    string[] sizes = { "B", "KB", "MB", "GB" };
+    double len = bytes;
+    int order = 0;
+
+    while (len >= 1024 && order < sizes.Length - 1)
+    {
+        order++;
+        len /= 1024;
+    }
+
+    return $"{len:F2} {sizes[order]}";
+}
+```
