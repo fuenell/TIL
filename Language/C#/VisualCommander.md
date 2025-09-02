@@ -30,8 +30,13 @@ public class C : VisualCommanderExt.ICommand
     {
         try
         {
-            // 사용하지 않는 using 문 제거
-            DTE.ExecuteCommand("Edit.RemoveAndSort");
+            // C++ 프로젝트에서는 작동하지 않아서 try로 예외 처리
+            try
+            {
+                // 사용하지 않는 using 문 제거
+                DTE.ExecuteCommand("Edit.RemoveAndSort");
+            }
+            catch { }
 
             // 포맷 문서 (코드 정렬)
             DTE.ExecuteCommand("Edit.FormatDocument");
@@ -66,5 +71,6 @@ public class C : VisualCommanderExt.ICommand
 
 ## 사용법
 평소처럼 저장할 일이 있을 때 `Ctrl+S`를 눌러서 코드 자동 정리 및 저장
+
 
 
