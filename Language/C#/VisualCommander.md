@@ -7,7 +7,7 @@ Visual Studio에서 매크로를 사용할 수 있게 해주는 확장 프로그
 ![image](https://github.com/user-attachments/assets/cecbaff4-2047-4e99-8038-c016eb8a07c1)
 
 
-2. 설치가 끝나면 Visual Studio을 다시 열고 `확장 > VCmd > Commands... > Add`
+2. 설치가 끝나면 Visual Studio을 **재시작** 후 `확장 > VCmd > Commands... > Add`
 
 ![image](https://github.com/user-attachments/assets/d64100c4-7a37-43a2-b638-6c915246b2b1)
 
@@ -66,3 +66,4 @@ public class C : VisualCommanderExt.ICommand
 
 ## 사용법
 평소처럼 저장할 일이 있을 때 `Ctrl+S`를 눌러서 코드 자동 정리 및 저장
+
