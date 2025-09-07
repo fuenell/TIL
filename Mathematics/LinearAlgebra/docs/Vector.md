@@ -14,6 +14,8 @@
 ### 내적 공식
 $$\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos\theta$$
 
+
+
 ### 요소로 쉽게 계산
 $$\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z$$
 
