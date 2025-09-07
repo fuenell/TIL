@@ -10,13 +10,23 @@
 
 구하는 방법은 각 항끼리 곱한 값을 모두 더한 값이다.
 
-이 값으로 두 벡터 사이의 각을 쉽게 구할 수 있다.
 
+### 내적 공식
+$$\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos\theta$$
+
+### 요소로 쉽게 계산
 $$\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z$$
 
+이 값으로 두 벡터 사이의 각을 쉽게 구할 수 있다.
 
+```
+두 벡터의 각도가 90도 이하면 양수
 
-$$\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos\theta$$
+두 벡터의 각도가 90도면 0
+
+두 벡터의 각도가 90도 이상면 음수
+```
+$\cos\theta$ 의 특징이 그대로 있기 때문에
 
 # 외적 (cross product)
 외적은 3차원 벡터끼리만 가능한 연산으로
