@@ -5,13 +5,43 @@
 
 하지만 그 값은 방향과 크기를 표현한다.
 
-# 내적
+# 내적 (dot product)
 내적은 두 벡터가 얼마나 겹치는지를 나타내는 값이다.
 
 구하는 방법은 각 항끼리 곱한 값을 모두 더한 값이다.
 
 이 값으로 두 벡터 사이의 각을 쉽게 구할 수 있다.
 
-# 외적
+$$\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z$$
+
+
+
+$$\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos\theta$$
+
+# 외적 (cross product)
+외적은 3차원 벡터끼리만 가능한 연산으로
+
+두 벡터에 모두 수직한 벡터를 구할 수 있다.
+
+* **좌표 형식** 
+
+$$\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y, a_z b_x - a_x b_z, a_x b_y - a_y b_x)$$
+
+---
+
+$$\mathbf{a} \times \mathbf{b} = \begin{vmatrix} \mathbf{i} & \mathbf{j} & \mathbf{k} \\ a_x & a_y & a_z \\ b_x & b_y & b_z \end{vmatrix} $$
+
+여인수 전개
+
+---
+
+$$\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y)\mathbf{i} - (a_x b_z - a_z b_x)\mathbf{j} + (a_x b_y - a_y b_x)\mathbf{k}$$
+
+---
+
+$$\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y)\mathbf{i} + (a_z b_x - a_x b_z)\mathbf{j} + (a_x b_y - a_y b_x)\mathbf{k}$$
+
+---
+
 
 # 반사 벡터
