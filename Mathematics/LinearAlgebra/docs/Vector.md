@@ -14,6 +14,15 @@
 ### 내적 공식
 $$\mathbf{a} \cdot \mathbf{b} = |\mathbf{a}| |\mathbf{b}| \cos\theta$$
 
+제2 코사인 전개식으로 (피타고라스 확장) 
+
+```
+(한 변의 길이)² = (다른 두 변의 길이)²의 합 - 2 × (다른 두 변의 곱) × (두 변 사이 끼인각의 코사인 값)
+직각 삼각형이 아닌 삼각형의 변의 길이 구하는법
+한 점에서 수선의 발을 내려서 가상을 직각 삼각형을 만들어서 구하는 원리
+```
+
+<img width="672" height="469" alt="image" src="https://github.com/user-attachments/assets/fe279d42-5c46-4ea2-9972-a83e13854eda" />
 
 
 ### 요소로 쉽게 계산
@@ -57,3 +66,4 @@ $$\mathbf{a} \times \mathbf{b} = (a_y b_z - a_z b_y)\mathbf{i} + (a_z b_x - a_x 
 
 
 # 반사 벡터
+
