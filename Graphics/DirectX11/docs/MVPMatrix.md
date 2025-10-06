@@ -84,8 +84,8 @@ $$
 
 $$
 \begin{bmatrix}
-Cos(θ) & -Sin(θ) \\
-Sin(θ) & Cos(θ)
+\cos(\theta) & -\sin(\theta) \\
+\sin(\theta) & \cos(\theta)
 \end{bmatrix}
 $$
 
