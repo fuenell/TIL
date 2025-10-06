@@ -160,9 +160,30 @@ $$
 ## View 행렬
 View 행렬은 모델을 카메라 앞으로 정렬 시키는 행렬이다.
 
-카메라의 위치의 역행렬을 구하면 된다?
+카메라의 회전과 이동의 역행렬을 구하면 된다
 
+왜냐면 모든 물체를 카메라가 0,0,0 위치에 존재할 때를 기준으로 정렬하는 것이기 때문에
+
+$$View = (T*R)^{-1} = R^{-1}T^{-1}$$
+
+
+$$R^{-1} = \begin{pmatrix} R^{-1} & \mathbf{0} \\ \mathbf{0} & 1 \end{pmatrix}$$
+
+$$T^{-1} = \begin{pmatrix} I & -t \\ \mathbf{0} & 1 \end{pmatrix}$$
+
+
+이제 이 둘을 순서에 맞게 곱하면 됩니다.
+
+$$
+R^{-1}T^{-1} = \begin{pmatrix} R^{-1} & \mathbf{0} \\ \mathbf{0} & 1 \end{pmatrix} \begin{pmatrix} I & -t \\ \mathbf{0} & 1 \end{pmatrix}
+$$
+
+$$
+= \begin{pmatrix} R^{-1} & -R^{-1}t \\ \mathbf{0} & 1 \end{pmatrix}
+$$
 
 ## Projection 행렬
 
 잘 구하면 됨
+
+
