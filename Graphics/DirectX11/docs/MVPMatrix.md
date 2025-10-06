@@ -103,8 +103,8 @@ $$
 R_x(\theta) =
 \begin{bmatrix}
 1 & 0 & 0 \\
-0 & \cos(\theta) & -\sin(\theta) \\
-0 & \sin(\theta) & \cos(\theta)
+0 & \cos(\theta) & \sin(\theta) \\
+0 & -\sin(\theta) & \cos(\theta)
 \end{bmatrix}
 $$
 
@@ -114,9 +114,9 @@ $$
 $$
 R_y(\theta) =
 \begin{bmatrix}
-\cos(\theta) & 0 & \sin(\theta) \\
+\cos(\theta) & 0 & -\sin(\theta) \\
 0 & 1 & 0 \\
--\sin(\theta) & 0 & \cos(\theta)
+\sin(\theta) & 0 & \cos(\theta)
 \end{bmatrix}
 $$
 
@@ -126,8 +126,8 @@ $$
 $$
 R_z(\theta) =
 \begin{bmatrix}
-\cos(\theta) & -\sin(\theta) & 0 \\
-\sin(\theta) & \cos(\theta) & 0 \\
+\cos(\theta) & \sin(\theta) & 0 \\
+-\sin(\theta) & \cos(\theta) & 0 \\
 0 & 0 & 1
 \end{bmatrix}
 $$
