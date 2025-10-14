@@ -50,6 +50,8 @@ obj는 기본적으로 RH CCW 로 되어있는데
 왜냐면 축 하나를 반대로 보고 있기 때문에
 버텍스의 순서는 항상 그대로 라고 생각해야 됨
 ```
+### RH + CCW를 LH + CW로 로드하면 좌표계가 달라서 자연스럽게 한번 뒤집힘
+<img width="3618" height="1826" alt="Image" src="https://github.com/user-attachments/assets/28b08058-0392-4c82-9807-e2c6952d64af" />
 
 ```
 DX의 NDC 공간은 LH 좌표계이고, 카메라도 LH 이기 때문에
