@@ -1,4 +1,5 @@
 # 색 공간 [#Manual](https://docs.unity3d.com/kr/2022.3/Manual/LinearRendering-LinearOrGammaWorkflow.html) [#Unity_Korea_Youtube](https://youtu.be/Xwlm5V-bnBc?si=3HPXD4KsaJl9NvRq)
+[#추가 설명 자료](https://rito15.github.io/posts/unity-srgb-linear-gamma-color-space/)
 
 카메라로 사진을 찍으면 사람의 눈의 보정이 없는 순수한 색상 값이 저장된다.
 
@@ -44,5 +45,6 @@ sRGB 이미지는 이미 밝게 저장되어 있기 때문에 단순히 그대�
 유니티를 gamma로 맞추거나 포토샵을 linear에 가깝게 설정할 수 있다.
 
 빛을 사용하지 않는 2D의 경우 투명도가 들어간 이미지를 사용할 때를 제외하고 색공간이 영향을 주지 않는다
+
 
 
