@@ -1,41 +1,94 @@
-# 언리얼 렌더독 연결
-언리얼에서 그래픽스 디버깅용 프로그램 렌더독을 연결하는 방법 (UE5 기준)
+# UE5에서 RenderDoc 연결하기 (그래픽 디버깅)
 
-0. 렌더독 설치
-알아서 설치
+## 0) RenderDoc 설치
 
-1. 플러그인 추가
-Edit > Plugins > Render Doc 검색 후 추가 및 재실행
-<img width="911" height="463" alt="Image" src="https://github.com/user-attachments/assets/8ebd4349-059f-44e1-81e9-c701d7542fea" />
+* 설치는 생략합니다. (RenderDoc만 정상 설치되어 있으면 됩니다)
 
-2. 프로젝트 설정에서 경로 및 자동 연결 설정
-- Auto attach on startup 옵션 체크
-- RenderDoc executable path 에 렌더독 프로그램 폴더 경로 설정 (qrenderdoc.exe 가 있는 폴더)
-<img width="872" height="557" alt="Image" src="https://github.com/user-attachments/assets/70e47295-213a-4caf-8c07-192c9f2f43ae" />
+---
 
-3. 이후 재시작 후 정상적으로 연결되면 뷰포트 상단에 렌더독 캡처 버튼이 생긴다
-(버튼이 보이지 않으면 OutputLog에서 연결 실패 사유 확인)
-<img width="1086" height="459" alt="Image" src="https://github.com/user-attachments/assets/8691dfcd-0430-48c5-9c66-c197c8565a93" />
+## 1) 플러그인 추가
 
-4. 이제 캡처하고 싶은 장면에서 해당 버튼을 누르면 자동으로 렌더독이 켜지면서
-(렌더독을 미리 켜둘 필요 없음)
+1. **Edit > Plugins**
+2. 검색창에 **RenderDoc** 검색
+3. 플러그인 **Enable(활성화)** 후 **에디터 재실행**
 
-### 필터
-1. Event Browser에서 수많은 요청들이 있는데 Fiter에서 `draw`를 검색하면 그나마 보기 편함
+![플러그인 추가](https://github.com/user-attachments/assets/8ebd4349-059f-44e1-81e9-c701d7542fea)
 
-### PS 디버깅
-만약 PS를 HLSL로 디버깅하고 싶으면 아래 절차를 모두 수행하면 된다
-(그냥 디버깅하면 어셈블리로 나옴)
+---
 
-1. 프로젝트를 끄고 `.uproject` 파일 바로가기를 생성한다
-2. 우클릭 > 속성 > 대상 끝에 `-d3ddebug -r.Shaders.Symbols=1 -r.Shaders.Optimize=0` 를 추가한다
+## 2) 프로젝트 설정에서 RenderDoc 경로 + 자동 연결 설정
 
-예시 `C:\Users\Demo.uproject -d3ddebug -r.Shaders.Symbols=1 -r.Shaders.Optimize=0`
+1. **Project Settings**에서 RenderDoc 관련 섹션으로 이동
+2. 아래 2개 설정을 해줍니다.
 
-3. 설정한 바로가기로 프로젝트를 실행한다 (셰이더 컴파일 오래 걸림)
+* **Auto attach on startup** ✅ 체크
+* **RenderDoc executable path**: `qrenderdoc.exe`가 있는 폴더 경로 지정
 
-4. 언리얼 콘솔창에 `r.Shaders.Symbols` 명령을 입력해서 `1` 로 잘 설정되었는지 확인한다.
+![프로젝트 설정](https://github.com/user-attachments/assets/70e47295-213a-4caf-8c07-192c9f2f43ae)
+
+---
+
+## 3) 재시작 후 연결 확인
+
+* 에디터 재시작 후 정상적으로 연결되면 **뷰포트 상단에 RenderDoc 캡처 버튼**이 생깁니다.
+
+![캡처 버튼](https://github.com/user-attachments/assets/8691dfcd-0430-48c5-9c66-c197c8565a93)
+
+* 버튼이 안 보이면:
+
+  * **Output Log**에서 RenderDoc 연결 실패 사유를 확인하세요.
+
+---
+
+## 4) 프레임 캡처
+
+* 캡처하고 싶은 장면에서 **캡처 버튼 클릭**
+* 자동으로 **RenderDoc이 실행되면서 프레임 캡처가 완료**됩니다.
+* RenderDoc을 **미리 켜둘 필요는 없습니다.**
+
+---
+
+# 추가 팁
+
+## 필터
+
+* **Event Browser**에 요청이 너무 많습니다.
+* **Filter**에 `draw`를 입력하면 그나마 보기 편합니다.
+
+---
+
+# PS(HLSL) 디버깅 설정 (어셈블리 말고 HLSL로 보기)
+
+그냥 디버깅하면 어셈블리로 나올 수 있습니다. **아래 절차를 모두 적용**하면 HLSL로 디버깅할 수 있습니다.
+
+## 1) 프로젝트 종료 후 `.uproject` 바로가기 생성
+
+* 프로젝트(에디터)를 끈 상태에서 `.uproject` 파일 **바로가기**를 만듭니다.
+
+## 2) 바로가기 실행 옵션 추가
+
+1. 바로가기 우클릭 → **속성**
+2. **대상(Target)** 맨 끝에 아래 옵션을 추가합니다.
+
+추가할 옵션:
+
+* `-d3ddebug -r.Shaders.Symbols=1 -r.Shaders.Optimize=0`
+
+예시:
+
+```txt
+C:\Users\Demo.uproject -d3ddebug -r.Shaders.Symbols=1 -r.Shaders.Optimize=0
 ```
+
+## 3) 해당 바로가기로 프로젝트 실행
+
+* 이 설정으로 실행하면 **셰이더 컴파일이 오래 걸릴 수 있습니다.**
+
+## 4) 콘솔에서 설정 적용 확인
+
+* 언리얼 콘솔창에서 아래 명령으로 확인합니다.
+
+```txt
 Cmd: r.Shaders.Symbols
 HISTORY
 Constructor: 0
@@ -43,7 +96,16 @@ SystemSettingsIni: 1
 r.Shaders.Symbols = "1"      LastSetBy: SystemSettingsIni
 ```
 
-5. 렌더독에서 셰이더 경로를 지정해준다
-렌더독 > Tools > Settings > Core > Shader debug search paths > `프로젝트경로\Saved\ShaderSymbols` 추가
+## 5) RenderDoc에 Shader Symbols 경로 추가
 
-6. 이제 Event Browser 에서 원하는 드로우콜을 찾아서 Texture View에서 우클릭으로 선택 후 픽셀 디버깅 하면됨
+1. RenderDoc 실행
+2. **Tools > Settings > Core**
+3. **Shader debug search paths**에 아래 경로 추가:
+
+* `프로젝트경로\Saved\ShaderSymbols`
+
+## 6) 픽셀 디버깅
+
+1. **Event Browser**에서 원하는 드로우콜 찾기
+2. **Texture View**에서 우클릭으로 대상 선택
+3. **Pixel Debugging** 실행
