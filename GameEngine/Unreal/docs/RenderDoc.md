@@ -86,8 +86,8 @@ C:\Users\Demo.uproject -d3ddebug -r.Shaders.Symbols=1 -r.Shaders.Optimize=0
 
 ## 4) 콘솔에서 설정 적용 확인
 
-* 언리얼 콘솔창에서 아래 명령으로 확인합니다.
-
+* 언리얼 콘솔창에서 아래 명령으로 셰이더 심볼이 1로 설정되었는지 확인합니다.
+`r.Shaders.Symbols`
 ```txt
 Cmd: r.Shaders.Symbols
 HISTORY
@@ -95,6 +95,8 @@ Constructor: 0
 SystemSettingsIni: 1
 r.Shaders.Symbols = "1"      LastSetBy: SystemSettingsIni
 ```
+
+만약 0으로 뜬다면 프로젝트 캐시 파일 모두 삭제 후 다시 바로가기로 실행하세요.
 
 ## 5) RenderDoc에 Shader Symbols 경로 추가
 
@@ -109,3 +111,4 @@ r.Shaders.Symbols = "1"      LastSetBy: SystemSettingsIni
 1. **Event Browser**에서 원하는 드로우콜 찾기
 2. **Texture View**에서 우클릭으로 대상 선택
 3. **Pixel Debugging** 실행
+
