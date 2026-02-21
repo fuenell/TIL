@@ -53,7 +53,7 @@ sin(-30°) = -sin(30°)
 즉 코싸인은 각의 코각을 구한 뒤 싸인을 계산하면된다
 cos(60°) = sin(30°) = 1/2
 
-
+![img](https://github.com/user-attachments/assets/cc5d340c-8d2b-4143-ac36-b113fdd5386a)
 
 1. 삼각함수 정의
 2. 삼각함수 어원
