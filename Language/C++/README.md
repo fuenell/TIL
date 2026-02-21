@@ -2,6 +2,10 @@
 C++ 를 공부하면서 중요한 개념의 문법 및 사용법을 간단히 정리  
 ([C++ 강의](https://modoocode.com/134))
 
+## 정리 필요
+- RValue, LValue
+- static_cast, dynamic_cast, const_cast, reinterpret_cast
+
 # Index
 ### 메모리
 - [참조자(Reference)](Reference.md)
